@@ -37,15 +37,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('BEC',
                     style: TextStyle(
                         color: Colors.teal[600].withOpacity(1),
-                        fontSize: 80.0,
+                        fontSize: 70.0,
                         fontWeight: FontWeight.bold)),
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(16.0, 175.0, 0.0, 0.0),
-                child: Text('Plugin',
+                padding: EdgeInsets.fromLTRB(15.0, 172.0, 0.0, 0.0),
+                child: Text('Faculty',
                     style: TextStyle(
                         color: Colors.teal[600].withOpacity(1),
-                        fontSize: 80.0,
+                        fontSize: 70.0,
+                        fontWeight: FontWeight.bold)),
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(15.0, 234.0, 0.0, 0.0),
+                child: Text('Helper',
+                    style: TextStyle(
+                        color: Colors.teal[600].withOpacity(1),
+                        fontSize: 70.0,
                         fontWeight: FontWeight.bold)),
               ),
             ],
@@ -92,9 +100,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 40.0),
+                SizedBox(height: 20.0),
                 Container(
-                  height: 40.0,
+                  height: 45.0,
                   child: Material(
                     borderRadius: BorderRadius.circular(20.0),
                     shadowColor: Colors.teal.shade600,
@@ -114,32 +122,32 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20.0),
-                Container(
-                  height: 40.0,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        SizedBox(width: 10.0),
-                        Center(
-                          child: Text('Log in with phone number',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Montserrat')),
-                        )
-                      ],
-                    ),
-                  ),
-                )
+                // SizedBox(height: 20.0),
+                // Container(
+                //   height: 40.0,
+                //   color: Colors.transparent,
+                //   child: Container(
+                //     decoration: BoxDecoration(
+                //         border: Border.all(
+                //             color: Colors.black,
+                //             style: BorderStyle.solid,
+                //             width: 1.0),
+                //         color: Colors.transparent,
+                //         borderRadius: BorderRadius.circular(20.0)),
+                //     child: Row(
+                //       mainAxisAlignment: MainAxisAlignment.center,
+                //       children: <Widget>[
+                //         SizedBox(width: 10.0),
+                //         Center(
+                //           child: Text('Log in with phone number',
+                //               style: TextStyle(
+                //                   fontWeight: FontWeight.bold,
+                //                   fontFamily: 'Montserrat')),
+                //         )
+                //       ],
+                //     ),
+                //   ),
+                // )
               ],
             )),
         SizedBox(height: 15.0),
