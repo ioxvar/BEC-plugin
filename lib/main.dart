@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
 
-import 'signup.dart';
+import './home.dart';
+import './signup.dart';
 
 void main() => runApp(new MyApp());
 
@@ -27,35 +27,38 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var logojpg = new AssetImage('assets/logo.jpg');
+    var img = new Image(
+      image: logojpg,
+      width: 420,
+      height: 180,
+    );
     return new Scaffold(
         body: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Container(
+          padding: EdgeInsets.fromLTRB(4.0, 102.0, 0.0, 0.0),
           child: Stack(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
-                child: Text('BEC',
+                padding: EdgeInsets.fromLTRB(2.0, 0.0, 0.0, 0.0),
+                child: img,
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(65.0, 200.0, 0.0, 0.0),
+                child: Text('BEC\tFaculty',
                     style: TextStyle(
                         color: Colors.teal[600].withOpacity(1),
-                        fontSize: 70.0,
+                        fontSize: 50.0,
                         fontWeight: FontWeight.bold)),
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(15.0, 172.0, 0.0, 0.0),
-                child: Text('Faculty',
-                    style: TextStyle(
-                        color: Colors.teal[600].withOpacity(1),
-                        fontSize: 70.0,
-                        fontWeight: FontWeight.bold)),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(15.0, 234.0, 0.0, 0.0),
+                padding: EdgeInsets.fromLTRB(135.0, 250.0, 0.0, 0.0),
                 child: Text('Helper',
                     style: TextStyle(
                         color: Colors.teal[600].withOpacity(1),
-                        fontSize: 70.0,
+                        fontSize: 50.0,
                         fontWeight: FontWeight.bold)),
               ),
             ],
@@ -126,32 +129,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                /*
-                // SizedBox(height: 20.0),
-                // Container(
-                //   child: Container(
-                //     decoration: BoxDecoration(
-                //         border: Border.all(
-                //             color: Colors.black,
-                //             style: BorderStyle.solid,
-                //             width: 1.0),
-                //         color: Colors.transparent,
-                //         borderRadius: BorderRadius.circular(20.0)),
-                //     child: Row(
-                //       mainAxisAlignment: MainAxisAlignment.center,
-                //       children: <Widget>[
-                //         SizedBox(width: 10.0),
-                //         Center(
-                //           child: Text('Log in with phone number',
-                //               style: TextStyle(
-                //                   fontWeight: FontWeight.bold,
-                //                   fontFamily: 'Montserrat')),
-                //         )
-                //       ],
-                //     ),
-                //   ),
-                // )
-                */
               ],
             )),
         SizedBox(height: 15.0),
