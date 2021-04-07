@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 import 'signup.dart';
 
@@ -10,7 +11,8 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        '/signup': (BuildContext context) => new SignupPage()
+        '/signup': (BuildContext context) => new SignupPage(),
+        '/home': (BuildContext context) => new HomePage()
       },
       home: new MyHomePage(),
     );
@@ -109,7 +111,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.teal[600],
                     elevation: 7.0,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/home');
+                      },
                       child: Center(
                         child: Text(
                           'LOGIN',
@@ -122,10 +126,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
+                /*
                 // SizedBox(height: 20.0),
                 // Container(
-                //   height: 40.0,
-                //   color: Colors.transparent,
                 //   child: Container(
                 //     decoration: BoxDecoration(
                 //         border: Border.all(
@@ -148,6 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 //     ),
                 //   ),
                 // )
+                */
               ],
             )),
         SizedBox(height: 15.0),
