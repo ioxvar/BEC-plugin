@@ -48,14 +48,16 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 padding: EdgeInsets.fromLTRB(65.0, 200.0, 0.0, 0.0),
                 child: Text('BEC\tFaculty',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.teal[600].withOpacity(1),
                         fontSize: 50.0,
                         fontWeight: FontWeight.bold)),
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(135.0, 250.0, 0.0, 0.0),
+                padding: EdgeInsets.fromLTRB(132.0, 250.0, 0.0, 0.0),
                 child: Text('Helper',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.teal[600].withOpacity(1),
                         fontSize: 50.0,
