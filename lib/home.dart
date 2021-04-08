@@ -1,39 +1,72 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class SideBar extends StatefulWidget {
+  const SideBar({Key key}) : super(key: key);
+
   @override
-  _HomeState createState() => _HomeState();
+  _SideBarState createState() => _SideBarState();
 }
 
-class _HomeState extends State<HomePage> {
+class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-      ),
-      home: MyHomePage(title: 'Demo Home Page'),
+    var drawerHeader = UserAccountsDrawerHeader(
+        decoration: BoxDecoration(
+          color: Colors.teal[600],
+        ),
+        accountName: Text('User Name'),
+        accountEmail: Text('user.name@email.com'),
+        currentAccountPicture: CircleAvatar(
+          backgroundColor: Colors.white,
+          child: Text('UN',
+              style: TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.cyan[700])),
+        ));
+    final drawerItems = ListView(
+      children: <Widget>[
+        drawerHeader,
+        ListTile(
+          title: const Text('Field 1'),
+          onTap: () => Navigator.of(context).push(_NewPage(1)),
+        ),
+        ListTile(
+          title: const Text('Field 2'),
+          onTap: () => Navigator.of(context).push(_NewPage(2)),
+        ),
+        ListTile(
+          title: const Text('Field 3'),
+          onTap: () => Navigator.of(context).push(_NewPage(3)),
+        ),
+      ],
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-    );
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: const Text('Home'),
+        ),
+        body: const Center(
+          child: Text('Top left icon to display drawer'),
+        ),
+        drawer: Drawer(
+          child: drawerItems,
+        ));
   }
+}
+
+// <void> means this route returns nothing.
+class _NewPage extends MaterialPageRoute<void> {
+  _NewPage(int id)
+      : super(builder: (BuildContext context) {
+          return Scaffold(
+            appBar: AppBar(
+              title: Text('Field $id'),
+              elevation: 1.0,
+            ),
+            body: Center(
+              child: Text('Field $id'),
+            ),
+          );
+        });
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './home.dart';
 import './signup.dart';
+import './home.dart';
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         '/signup': (BuildContext context) => new SignupPage(),
-        '/home': (BuildContext context) => new HomePage()
+        '/home': (BuildContext context) => new SideBar()
       },
       home: new MyHomePage(),
     );

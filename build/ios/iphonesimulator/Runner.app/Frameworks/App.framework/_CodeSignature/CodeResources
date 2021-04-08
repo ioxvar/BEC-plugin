@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		Gj6QXnqnqVZJL7hzoZ2lQp9uia4=
+		1YWPo+rU7qkV1tcxBOOIUvjj+vE=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -19,10 +19,6 @@
 		<key>flutter_assets/NOTICES</key>
 		<data>
 		nqAWONelQdzA9tKwZD0MiQ23UqI=
-		</data>
-		<key>flutter_assets/assets/bec-logo.png</key>
-		<data>
-		KrXIFKSupauVkDXzYDmX+HIe0N0=
 		</data>
 		<key>flutter_assets/assets/logo.jpg</key>
 		<data>
@@ -38,7 +34,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		NA8ehFMhVhxPNyrzY6NBEVQSuHw=
+		unDYFWL/Xu8ujHkr6ITrOooPIzQ=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -55,11 +51,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Gj6QXnqnqVZJL7hzoZ2lQp9uia4=
+			1YWPo+rU7qkV1tcxBOOIUvjj+vE=
 			</data>
 			<key>hash2</key>
 			<data>
-			2dZo+EfdOeAokMnKu1lUpspkWM3tk4u4Esz+0tsoPJA=
+			siLw+NtW7LJdKlYywKTr+0fUIH1JpfsdDKLpBm7O/xM=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -82,17 +78,6 @@
 			<key>hash2</key>
 			<data>
 			LX+62FEAQOTlIMC0tgOQPo6Fg3AYSDvMnTHe2vUMHGo=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/bec-logo.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KrXIFKSupauVkDXzYDmX+HIe0N0=
-			</data>
-			<key>hash2</key>
-			<data>
-			V/sttd87WYTPGsdOocZxvySmoHoauIrAhnCoTUi8ChA=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/logo.jpg</key>
@@ -132,11 +117,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NA8ehFMhVhxPNyrzY6NBEVQSuHw=
+			unDYFWL/Xu8ujHkr6ITrOooPIzQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			YSEk7Tc7Ofqtq3judNcDEgJmPPqVGeO8TOB5j2NtCaQ=
+			x58pRI7ine4hz8FexiVDv1HqgeknovvuAcmDEO/qvzs=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
