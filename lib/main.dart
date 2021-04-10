@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './signup.dart';
 import './home.dart';
+// This a comment
 
 void main() => runApp(new MyApp());
 
