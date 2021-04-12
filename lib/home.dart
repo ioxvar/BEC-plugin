@@ -61,6 +61,7 @@ class _NewPage extends MaterialPageRoute<void> {
       : super(builder: (BuildContext context) {
           return Scaffold(
             appBar: AppBar(
+              backgroundColor: Colors.teal,
               title: Text('Field $id'),
               elevation: 1.0,
             ),
