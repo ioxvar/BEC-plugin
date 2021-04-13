@@ -8,20 +8,36 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var logojpg = new AssetImage('assets/logo.jpg');
+    var img = new Image(
+      image: logojpg,
+      width: 420,
+      height: 180,
+    );
     return Scaffold(
       body: Column(
-        children: [
+        children: <Widget>[
           TextField(
             controller: emailController,
             decoration: InputDecoration(
-              labelText: "Email",
-            ),
+                labelText: 'EMAIL',
+                labelStyle: TextStyle(
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey),
+                focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.teal[600]))),
           ),
           TextField(
             controller: passwordController,
             decoration: InputDecoration(
-              labelText: "Password",
-            ),
+                labelText: 'PASSWORD',
+                labelStyle: TextStyle(
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey),
+                focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.green))),
           ),
           ElevatedButton(
             onPressed: () {
