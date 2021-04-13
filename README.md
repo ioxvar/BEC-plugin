@@ -1,4 +1,4 @@
-# appbrew
+# bec plugin
 
 A new Flutter application.
 
