@@ -1,6 +1,6 @@
-//import './authentication_service.dart';
+import './authentication_service.dart';
 import 'package:flutter/material.dart';
-//import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 /*
 class HomePage extends StatelessWidget {
   @override
@@ -64,6 +64,12 @@ class _SideBarState extends State<SideBar> {
           title: const Text('Field 3'),
           onTap: () => Navigator.of(context).push(_NewPage(3)),
         ),
+        ListTile(
+          title: const Text('Sign out'),
+          onTap: () {
+            context.read<AuthenticationService>().signOut();
+          },
+        )
       ],
     );
     return Scaffold(
