@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21fa5732-e742-4850-b7d3-d06e89def55c" name="Default Changelist" comment="" />
+    <list default="true" id="21fa5732-e742-4850-b7d3-d06e89def55c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/App.framework/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/App.framework/flutter_assets/kernel_blob.bin" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1pWkKl6hIbGyokIK8mFstnx3ujZ" />
   <component name="ProjectViewState">
@@ -38,9 +44,10 @@
       <screen x="54" y="25" width="1386" height="875" />
     </state>
     <state x="526" y="162" width="580" height="365" key="#Notifications/54.25.1386.875@54.25.1386.875" timestamp="1618221775611" />
-    <state x="154" y="125" width="821" height="675" key="AVDManager" timestamp="1618222416381">
-      <screen x="54" y="25" width="1386" height="875" />
+    <state x="104" y="117" width="853" height="621" key="AVDManager" timestamp="1618306252928">
+      <screen x="0" y="25" width="1440" height="805" />
     </state>
+    <state x="104" y="117" width="853" height="621" key="AVDManager/0.25.1440.805@0.25.1440.805" timestamp="1618306252928" />
     <state x="154" y="125" width="821" height="675" key="AVDManager/54.25.1386.875@54.25.1386.875" timestamp="1618222416381" />
     <state width="1344" height="227" key="GridCell.Tab.0.bottom" timestamp="1618222828555">
       <screen x="54" y="25" width="1386" height="875" />
