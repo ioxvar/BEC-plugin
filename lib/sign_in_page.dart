@@ -1,6 +1,7 @@
 import './authentication_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import './signup.dart';
 
 class SignInPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -79,6 +80,10 @@ class SignInPage extends StatelessWidget {
                     alignment: Alignment(1.0, 0.0),
                     padding: EdgeInsets.only(top: 15.0, left: 20.0),
                     child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => SignupPage()));
+                      },
                       child: Text(
                         'New User?',
                         style: TextStyle(
@@ -91,21 +96,37 @@ class SignInPage extends StatelessWidget {
                   ),
                 ],
               )),
-          ElevatedButton(
-            onPressed: () {
+          SizedBox(height: 50.0),
+          GestureDetector(
+            onTap: () {
               context.read<AuthenticationService>().signIn(
                     email: emailController.text.trim(),
                     password: passwordController.text.trim(),
                   );
             },
-            child: Text(
-              'Sign in',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Montserrat'),
+            child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+                return Container(
+                    height: 40.0,
+                    width: 120.0,
+                    //color: Colors.red,
+
+                    // height: 50.0,
+                    child: Material(
+                        borderRadius: BorderRadius.circular(30.0),
+                        shadowColor: Colors.teal[600],
+                        color: Colors.teal[600],
+                        elevation: 7.0,
+                        child: Center(
+                            child: Text('LOGIN',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Montserrat')))));
+              },
             ),
-          )
+          ),
         ],
       ),
     );
