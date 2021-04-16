@@ -1,11 +1,11 @@
+import './authentication_service.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class SignupPage extends StatefulWidget {
-  @override
-  _SignupPageState createState() => _SignupPageState();
-}
+class SignupPage extends StatelessWidget {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
-class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -36,6 +36,7 @@ class _SignupPageState extends State<SignupPage> {
               child: Column(
                 children: <Widget>[
                   TextField(
+                    controller: emailController,
                     decoration: InputDecoration(
                         labelText: 'EMAIL',
                         labelStyle: TextStyle(
@@ -47,6 +48,7 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                   SizedBox(height: 10.0),
                   TextField(
+                    controller: passwordController,
                     decoration: InputDecoration(
                         labelText: 'PASSWORD ',
                         labelStyle: TextStyle(
@@ -57,7 +59,7 @@ class _SignupPageState extends State<SignupPage> {
                             borderSide: BorderSide(color: Colors.green))),
                     obscureText: true,
                   ),
-                  SizedBox(height: 10.0),
+                  /*   SizedBox(height: 10.0),
                   TextField(
                     decoration: InputDecoration(
                         labelText: 'NAME ',
@@ -67,7 +69,7 @@ class _SignupPageState extends State<SignupPage> {
                             color: Colors.grey),
                         focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.green))),
-                  ),
+                  ),*/
                   SizedBox(height: 50.0),
                   Container(
                       height: 40.0,
@@ -77,7 +79,13 @@ class _SignupPageState extends State<SignupPage> {
                         color: Colors.teal[600],
                         elevation: 7.0,
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            context.read<AuthenticationService>().signUp(
+                                  email: emailController.text.trim(),
+                                  password: passwordController.text.trim(),
+                                );
+                            Navigator.of(context).pop();
+                          },
                           child: Center(
                             child: Text(
                               'SIGNUP',
