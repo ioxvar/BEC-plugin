@@ -1,6 +1,6 @@
-# bec_plugin
+# bec plugin
 
-A new Flutter project for my university.
+A new Flutter application.
 
 ## Getting Started
 
