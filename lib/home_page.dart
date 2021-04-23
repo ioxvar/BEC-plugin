@@ -1,6 +1,7 @@
 import './authentication_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({Key key}) : super(key: key);

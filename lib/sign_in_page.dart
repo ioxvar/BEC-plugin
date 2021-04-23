@@ -9,7 +9,7 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var logojpg = new AssetImage("assets/logo.jpg");
+    var logojpg = new AssetImage("assets/logobec.png");
     var img = new Image(
       image: logojpg,
       width: 420,
