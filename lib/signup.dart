@@ -47,7 +47,8 @@ class SignupPage extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey),
                             focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
+                                borderSide:
+                                    BorderSide(color: Colors.teal[600]))),
                       ),
                       SizedBox(height: 10.0),
                       TextField(
@@ -59,7 +60,8 @@ class SignupPage extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey),
                             focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
+                                borderSide:
+                                    BorderSide(color: Colors.teal[600]))),
                         obscureText: true,
                       ),
                       /*   SizedBox(height: 10.0),
