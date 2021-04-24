@@ -2,6 +2,7 @@ import './authentication_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
+import './newpage.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({Key key}) : super(key: key);
@@ -31,16 +32,20 @@ class _SideBarState extends State<SideBar> {
       children: <Widget>[
         drawerHeader,
         ListTile(
-          title: const Text('Field 1'),
-          onTap: () => Navigator.of(context).push(_NewPage(1)),
+          title: const Text('ADD'),
+          onTap: () => Navigator.of(context).push(NewPage(1)),
         ),
         ListTile(
-          title: const Text('Field 2'),
-          onTap: () => Navigator.of(context).push(_NewPage(2)),
+          title: const Text('FETCH'),
+          onTap: () => Navigator.of(context).push(NewPage(2)),
         ),
         ListTile(
-          title: const Text('Field 3'),
-          onTap: () => Navigator.of(context).push(_NewPage(3)),
+          title: const Text('UPDATE'),
+          onTap: () => Navigator.of(context).push(NewPage(3)),
+        ),
+        ListTile(
+          title: const Text('DELETE'),
+          onTap: () => Navigator.of(context).push(NewPage(4)),
         ),
         ListTile(
           title: const Text('Sign out'),
@@ -55,28 +60,122 @@ class _SideBarState extends State<SideBar> {
           backgroundColor: Colors.teal,
           title: const Text('Home'),
         ),
-        body: const Center(
-          child: Text('Top left icon to display drawer'),
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 200.0),
+              Container(
+                height: 40.0,
+                width: 320,
+                color: Colors.transparent,
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.black,
+                          style: BorderStyle.solid,
+                          width: 1.0),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(20.0)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(NewPage(1));
+                    },
+                    child: Center(
+                      child: Text('ADD',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Montserrat')),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 40.0),
+              Container(
+                height: 40.0,
+                width: 320,
+                color: Colors.transparent,
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.black,
+                          style: BorderStyle.solid,
+                          width: 1.0),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(20.0)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(NewPage(2));
+                    },
+                    child: Center(
+                      child: Text('FETCH',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Montserrat')),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 40.0),
+              Container(
+                height: 40.0,
+                width: 320,
+                color: Colors.transparent,
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.black,
+                          style: BorderStyle.solid,
+                          width: 1.0),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(20.0)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(NewPage(3));
+                    },
+                    child: Center(
+                      child: Text('UPDATE',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Montserrat')),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 40.0),
+              Container(
+                height: 40.0,
+                width: 320,
+                color: Colors.transparent,
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.black,
+                          style: BorderStyle.solid,
+                          width: 1.0),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(20.0)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(NewPage(4));
+                    },
+                    child: Center(
+                      child: Text('DELETE',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Montserrat')),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () => Navigator.of(context).push(NewPage(1)),
+            backgroundColor: Colors.teal[600],
+            child: Icon(Icons.add)),
         drawer: Drawer(
           child: drawerItems,
         ));
   }
-}
-
-// <void> means this route returns nothing.
-class _NewPage extends MaterialPageRoute<void> {
-  _NewPage(int id)
-      : super(builder: (BuildContext context) {
-          return Scaffold(
-            appBar: AppBar(
-              backgroundColor: Colors.teal,
-              title: Text('Field $id'),
-              elevation: 1.0,
-            ),
-            body: Center(
-              child: Text('Field $id'),
-            ),
-          );
-        });
 }

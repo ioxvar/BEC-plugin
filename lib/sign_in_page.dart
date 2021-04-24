@@ -113,9 +113,6 @@ class SignInPage extends StatelessWidget {
                     return Container(
                         height: 40.0,
                         width: 120.0,
-                        //color: Colors.red,
-
-                        // height: 50.0,
                         child: Material(
                             borderRadius: BorderRadius.circular(30.0),
                             shadowColor: Colors.teal[600],
