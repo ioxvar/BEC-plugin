@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import './newpage.dart';
+import './sign_in_page.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({Key key}) : super(key: key);
@@ -63,10 +64,19 @@ class _SideBarState extends State<SideBar> {
         body: Center(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 200.0),
+              Container(
+                padding: EdgeInsets.fromLTRB(10, 150, 0, 0),
+                child: Text('Student Records',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.teal[600].withOpacity(1),
+                        fontSize: 40.0,
+                        fontWeight: FontWeight.bold)),
+              ),
+              SizedBox(height: 80.0),
               Container(
                 height: 40.0,
-                width: 320,
+                width: 300,
                 color: Colors.transparent,
                 child: Container(
                   decoration: BoxDecoration(
@@ -83,6 +93,7 @@ class _SideBarState extends State<SideBar> {
                     child: Center(
                       child: Text('ADD',
                           style: TextStyle(
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat')),
                     ),
@@ -92,7 +103,7 @@ class _SideBarState extends State<SideBar> {
               SizedBox(height: 40.0),
               Container(
                 height: 40.0,
-                width: 320,
+                width: 300,
                 color: Colors.transparent,
                 child: Container(
                   decoration: BoxDecoration(
@@ -109,6 +120,7 @@ class _SideBarState extends State<SideBar> {
                     child: Center(
                       child: Text('FETCH',
                           style: TextStyle(
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat')),
                     ),
@@ -118,7 +130,7 @@ class _SideBarState extends State<SideBar> {
               SizedBox(height: 40.0),
               Container(
                 height: 40.0,
-                width: 320,
+                width: 300,
                 color: Colors.transparent,
                 child: Container(
                   decoration: BoxDecoration(
@@ -135,6 +147,7 @@ class _SideBarState extends State<SideBar> {
                     child: Center(
                       child: Text('UPDATE',
                           style: TextStyle(
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat')),
                     ),
@@ -144,7 +157,7 @@ class _SideBarState extends State<SideBar> {
               SizedBox(height: 40.0),
               Container(
                 height: 40.0,
-                width: 320,
+                width: 300,
                 color: Colors.transparent,
                 child: Container(
                   decoration: BoxDecoration(
@@ -161,6 +174,7 @@ class _SideBarState extends State<SideBar> {
                     child: Center(
                       child: Text('DELETE',
                           style: TextStyle(
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat')),
                     ),
