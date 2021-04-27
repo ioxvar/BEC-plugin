@@ -57,6 +57,8 @@ class SignInPage extends StatelessWidget {
                       TextField(
                         controller: emailController,
                         decoration: InputDecoration(
+                            hintText: 'something@email.com',
+                            hintStyle: TextStyle(color: Colors.grey[400]),
                             labelText: 'EMAIL',
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
@@ -70,6 +72,8 @@ class SignInPage extends StatelessWidget {
                       TextField(
                         controller: passwordController,
                         decoration: InputDecoration(
+                            hintText: '6+ characters',
+                            hintStyle: TextStyle(color: Colors.grey[400]),
                             labelText: 'PASSWORD',
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
