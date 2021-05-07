@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import './newpage.dart';
-import './sign_in_page.dart';
+//import './sign_in_page.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({Key key}) : super(key: key);
