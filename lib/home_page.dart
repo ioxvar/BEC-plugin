@@ -49,7 +49,7 @@ class _SideBarState extends State<SideBar> {
           onTap: () => Navigator.of(context).push(NewPage(4)),
         ),
         ListTile(
-          title: const Text('Sign out'),
+          title: const Text('SIGN OUT'),
           onTap: () {
             context.read<AuthenticationService>().signOut();
           },

@@ -74,17 +74,6 @@ class _SignupPageState extends State<SignupPage> {
                                     BorderSide(color: Colors.teal[600]))),
                         obscureText: true,
                       ),
-                      /*   SizedBox(height: 10.0),
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: 'NAME ',
-                        labelStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
-                  ),*/
                       SizedBox(height: 50.0),
                       Container(
                           height: 40.0,
