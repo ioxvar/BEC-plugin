@@ -1,6 +1,6 @@
 # bec plugin
 
-Uni Project
+Uni Project. 
 Work in Progress
 
 ## Getting Started
