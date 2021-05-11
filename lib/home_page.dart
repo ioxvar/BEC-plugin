@@ -32,28 +32,64 @@ class _SideBarState extends State<SideBar> {
     final drawerItems = ListView(
       children: <Widget>[
         drawerHeader,
-        ListTile(
+        /*ListTile(
           title: const Text('ADD'),
           onTap: () => Navigator.of(context).push(NewPage(1)),
+        ),*/
+        TextButton.icon(
+          onPressed: () {
+            Navigator.of(context).push(NewPage(1));
+          },
+          icon: Icon(Icons.add_sharp),
+          label: Text('ADD'),
         ),
-        ListTile(
+        /*ListTile(
           title: const Text('FETCH'),
           onTap: () => Navigator.of(context).push(NewPage(2)),
+        ),*/
+        TextButton.icon(
+          onPressed: () {
+            Navigator.of(context).push(NewPage(2));
+          },
+          icon: Icon(Icons.arrow_downward),
+          label: Text('FETCH'),
         ),
-        ListTile(
+        /*ListTile(
           title: const Text('UPDATE'),
           onTap: () => Navigator.of(context).push(NewPage(3)),
+        ),*/
+
+        TextButton.icon(
+          onPressed: () {
+            Navigator.of(context).push(NewPage(3));
+          },
+          icon: Icon(Icons.update_sharp),
+          label: Text('UPDATE'),
         ),
-        ListTile(
+        /*ListTile(
           title: const Text('DELETE'),
           onTap: () => Navigator.of(context).push(NewPage(4)),
+        ),*/
+        TextButton.icon(
+          onPressed: () {
+            Navigator.of(context).push(NewPage(4));
+          },
+          icon: Icon(Icons.delete),
+          label: Text('DELETE'),
         ),
-        ListTile(
+        /*ListTile(
           title: const Text('SIGN OUT'),
           onTap: () {
             context.read<AuthenticationService>().signOut();
           },
-        )
+        ),*/
+        TextButton.icon(
+          onPressed: () {
+            context.read<AuthenticationService>().signOut();
+          },
+          icon: Icon(Icons.logout),
+          label: Text('SIGN OUT'),
+        ),
       ],
     );
     return Scaffold(

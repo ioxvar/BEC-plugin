@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:becplugin/auth/authentication_service.dart';
 import './home_page.dart';
 import 'package:becplugin/auth/sign_in_page.dart';
-import './flutterfire.dart';
+import 'sys/flutterfire.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
