@@ -7,7 +7,7 @@ FirebaseFirestore firestore = FirebaseFirestore.instance;
 class AddUser extends StatelessWidget {
   final String fullName;
   final String company;
-  final int age;
+  var age;
 
   AddUser(this.fullName, this.company, this.age);
 

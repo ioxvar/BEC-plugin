@@ -1,4 +1,4 @@
-import 'package:becplugin/flutterfire.dart';
+//import 'package:becplugin/flutterfire.dart';
 import 'package:flutter/material.dart';
 import './flutterfire.dart';
 import 'package:provider/provider.dart';
@@ -51,17 +51,19 @@ class NewPage extends MaterialPageRoute<void> {
                             controller: agein,
                             decoration: const InputDecoration(
                               //icon: Icon(Icons.person),
-                              hintText: 'Enter agein',
+                              hintText: 'Enter your age',
                               labelText: 'Age',
                             ),
                           ),
                           SizedBox(height: 50.0),
                           GestureDetector(
-                            /*  onTap: () {
+                            /*      
+                               onTap: () {
                           context.read<AddUser>().addUser(
                               fullName: name.text.trim(),
                               company: cmpny.text.trim(),
-                              aget: agein.value);
+                              aget: agein.value
+                              );
                         },*/
                             child: LayoutBuilder(
                               builder: (BuildContext context,

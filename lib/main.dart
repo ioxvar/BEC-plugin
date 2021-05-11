@@ -1,12 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 
 import './authentication_service.dart';
 import './home_page.dart';
 import './sign_in_page.dart';
-//import './flutterfire.dart';
+import './flutterfire.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +26,13 @@ class MyApp extends StatelessWidget {
         StreamProvider(
           create: (context) =>
               context.read<AuthenticationService>().authStateChanges,
-        )
+        ),
+        /**
+      !!!!Resolve this!!!!
+     * Provider<AddUser>(
+     *     create: (_) => AddUser(fullName, company, age)
+     *   ),
+      */
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
