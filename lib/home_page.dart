@@ -31,52 +31,29 @@ class _SideBarState extends State<SideBar> {
         ));
     final drawerItems = ListView(
       children: <Widget>[
+        Align(),
         drawerHeader,
-        /*ListTile(
+        ListTile(
+          leading: Icon(Icons.add_sharp),
           title: const Text('ADD'),
           onTap: () => Navigator.of(context).push(NewPage(1)),
-        ),*/
-        TextButton.icon(
-          onPressed: () {
-            Navigator.of(context).push(NewPage(1));
-          },
-          icon: Icon(Icons.add_sharp),
-          label: Text('ADD'),
         ),
-        /*ListTile(
+        ListTile(
+          leading: Icon(Icons.arrow_downward),
           title: const Text('FETCH'),
           onTap: () => Navigator.of(context).push(NewPage(2)),
-        ),*/
-        TextButton.icon(
-          onPressed: () {
-            Navigator.of(context).push(NewPage(2));
-          },
-          icon: Icon(Icons.arrow_downward),
-          label: Text('FETCH'),
         ),
-        /*ListTile(
+        ListTile(
+          leading: Icon(Icons.update_sharp),
           title: const Text('UPDATE'),
           onTap: () => Navigator.of(context).push(NewPage(3)),
-        ),*/
-
-        TextButton.icon(
-          onPressed: () {
-            Navigator.of(context).push(NewPage(3));
-          },
-          icon: Icon(Icons.update_sharp),
-          label: Text('UPDATE'),
         ),
-        /*ListTile(
+        ListTile(
+          leading: Icon(Icons.delete),
           title: const Text('DELETE'),
           onTap: () => Navigator.of(context).push(NewPage(4)),
-        ),*/
-        TextButton.icon(
-          onPressed: () {
-            Navigator.of(context).push(NewPage(4));
-          },
-          icon: Icon(Icons.delete),
-          label: Text('DELETE'),
         ),
+
         /*ListTile(
           title: const Text('SIGN OUT'),
           onTap: () {
