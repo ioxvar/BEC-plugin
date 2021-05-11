@@ -4,13 +4,18 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-class AddUser extends StatelessWidget {
+class AddUser extends StatefulWidget {
   final String fullName;
   final String company;
-  var age;
+  final int age;
 
   AddUser(this.fullName, this.company, this.age);
 
+  @override
+  _AddUserState createState() => _AddUserState();
+}
+
+class _AddUserState extends State<AddUser> {
   @override
   Widget build(BuildContext context) {
     // Create a CollectionReference called users that references the firestore collection
@@ -20,9 +25,9 @@ class AddUser extends StatelessWidget {
       // Call the user's CollectionReference to add a new user
       return users
           .add({
-            'full_name': fullName, // John Doe
-            'company': company, // Stokes and Sons
-            'age': age // 42
+            'full_name': widget.fullName, // John Doe
+            'company': widget.company, // Stokes and Sons
+            'age': widget.age // 42
           })
           .then((value) => print("User Added"))
           .catchError((error) => print("Failed to add user: $error"));

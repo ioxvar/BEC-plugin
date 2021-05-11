@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-//import 'package:becplugin/flutterfire.dart';
+import 'package:becplugin/sys/flutterfire.dart';
 
 final TextEditingController name = TextEditingController();
 final TextEditingController cmpny = TextEditingController();
 final TextEditingController agein = TextEditingController();
 
-class AddData extends StatelessWidget {
+class AddData extends StatefulWidget {
+  @override
+  _AddDataState createState() => _AddDataState();
+}
+
+class _AddDataState extends State<AddData> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,14 +58,12 @@ class AddData extends StatelessWidget {
                 ),
                 SizedBox(height: 50.0),
                 GestureDetector(
-                  /*      
-                               onTap: () {
-                          context.read<AddUser>().addUser(
-                              fullName: name.text.trim(),
-                              company: cmpny.text.trim(),
-                              aget: agein.value
-                              );
-                        },*/
+                  /*  onTap: () {
+                    context.read<AddUser>().users(
+                        fullName: name.text.trim(),
+                        company: cmpny.text.trim(),
+                        aget: agein.value);
+                  },*/
                   child: LayoutBuilder(
                     builder:
                         (BuildContext context, BoxConstraints constraints) {

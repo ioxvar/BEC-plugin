@@ -1,11 +1,11 @@
 //import 'package:becplugin/flutterfire.dart';
 import 'package:becplugin/crud/add.dart';
 import 'package:becplugin/crud/delete.dart';
-import 'package:becplugin/crud/updata_data.dart';
+import 'package:becplugin/crud/update_data.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 
-import '../flutterfire.dart';
+//import '../flutterfire.dart';
 import 'fetch.dart';
 
 class NewPage extends MaterialPageRoute<void> {
@@ -13,19 +13,19 @@ class NewPage extends MaterialPageRoute<void> {
       : super(builder: (BuildContext context) {
           switch (id) {
             case 1:
-              AddData();
+              return AddData();
               break;
 
             case 2:
-              FetchData();
+              return FetchData();
               break;
 
             case 3:
-              Update();
+              return Update();
               break;
 
             case 4:
-              DeleteData();
+              return DeleteData();
               break;
 
             default:
