@@ -1,8 +1,8 @@
-import './authentication_service.dart';
+import 'package:becplugin/auth/authentication_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
-import './newpage.dart';
+import 'crud/newpages.dart';
 //import './sign_in_page.dart';
 
 class SideBar extends StatefulWidget {

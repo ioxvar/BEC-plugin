@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 
-import './authentication_service.dart';
+import 'package:becplugin/auth/authentication_service.dart';
 import './home_page.dart';
-import './sign_in_page.dart';
+import 'package:becplugin/auth/sign_in_page.dart';
 import './flutterfire.dart';
 
 Future<void> main() async {
