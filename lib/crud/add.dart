@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 // ignore: unused_import
@@ -13,6 +14,15 @@ class AddData extends StatefulWidget {
 }
 
 class _AddDataState extends State<AddData> {
+  Map data;
+
+  add() {
+    Map<String, dynamic> data = {"name": "Keanu", "occupation": "🐐"};
+    CollectionReference collectionReference =
+        FirebaseFirestore.instance.collection('test');
+    collectionReference.add(data);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,12 +70,9 @@ class _AddDataState extends State<AddData> {
                 ),
                 SizedBox(height: 50.0),
                 GestureDetector(
-                  /*onTap: () {
-                    updateUserData(
-                        fullName: name.text.trim(),
-                        company: cmpny.text.trim(),
-                        aget: agein.value);
-                  },*/
+                  onTap: () {
+                    add();
+                  },
                   child: LayoutBuilder(
                     builder:
                         (BuildContext context, BoxConstraints constraints) {
