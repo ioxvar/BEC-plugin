@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import '../sys/flutterfire.dart';
 
 class AuthenticationService {
   final FirebaseAuth _firebaseAuth;
@@ -15,6 +17,7 @@ class AuthenticationService {
     try {
       await _firebaseAuth.signInWithEmailAndPassword(
           email: email, password: password);
+
       return "Signed in";
     } on FirebaseAuthException catch (e) {
       return e.message;
@@ -25,6 +28,8 @@ class AuthenticationService {
     try {
       await _firebaseAuth.createUserWithEmailAndPassword(
           email: email, password: password);
+
+      await DatabaseService().updateUserData('neo', 'matrix', 40);
       return "Signed up";
     } on FirebaseAuthException catch (e) {
       return e.message;

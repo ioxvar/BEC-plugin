@@ -1,22 +1,16 @@
-import 'package:flutter/material.dart';
-// ignore: unused_import
-import 'package:firebase_core/firebase_core.dart';
+/*import 'package:flutter/material.dart';
+
+// Import the firebase_core and cloud_firestore plugin
+//import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-FirebaseFirestore firestore = FirebaseFirestore.instance;
-
-class AddUser extends StatefulWidget {
-  final String fullName;
+class AddUser extends StatelessWidget {
+  final String fullcompany;
   final String company;
   final int age;
 
-  AddUser(this.fullName, this.company, this.age);
+  AddUser(this.fullcompany, this.company, this.age);
 
-  @override
-  _AddUserState createState() => _AddUserState();
-}
-
-class _AddUserState extends State<AddUser> {
   @override
   Widget build(BuildContext context) {
     // Create a CollectionReference called users that references the firestore collection
@@ -26,9 +20,9 @@ class _AddUserState extends State<AddUser> {
       // Call the user's CollectionReference to add a new user
       return users
           .add({
-            'full_name': widget.fullName, // John Doe
-            'company': widget.company, // Stokes and Sons
-            'age': widget.age // 42
+            'full_company': fullcompany, // John Doe
+            'company': company, // Stokes and Sons
+            'age': age // 42
           })
           .then((value) => print("User Added"))
           .catchError((error) => print("Failed to add user: $error"));
@@ -40,5 +34,29 @@ class _AddUserState extends State<AddUser> {
         "Add User",
       ),
     );
+  }
+}
+*/
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+class DatabaseService {
+  //final String uid;
+  DatabaseService();
+
+  // collection reference
+  final CollectionReference testData =
+      FirebaseFirestore.instance.collection('deets');
+
+  Future<void> updateUserData(String name, String company, int age) async {
+    return await testData.doc().set({
+      'name': name,
+      'company': company,
+      'age': age,
+    });
+  }
+
+  Stream<QuerySnapshot> get data {
+    return testData.snapshots();
   }
 }

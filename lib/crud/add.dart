@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 // ignore: unused_import
 import 'package:becplugin/sys/flutterfire.dart';
 
@@ -59,8 +60,8 @@ class _AddDataState extends State<AddData> {
                 ),
                 SizedBox(height: 50.0),
                 GestureDetector(
-                  /*  onTap: () {
-                    context.read<AddUser>().users(
+                  /*onTap: () {
+                    updateUserData(
                         fullName: name.text.trim(),
                         company: cmpny.text.trim(),
                         aget: agein.value);
