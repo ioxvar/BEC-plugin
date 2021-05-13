@@ -30,7 +30,7 @@ class AuthenticationService {
       await _firebaseAuth.createUserWithEmailAndPassword(
           email: email, password: password);
 
-      await DatabaseService().updateUserData('neo', 'matrix', 40);
+      //await DatabaseService().updateUserData('neo', 'matrix', 40);
       return "Signed up";
     } on FirebaseAuthException catch (e) {
       return e.message;

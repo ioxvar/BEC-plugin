@@ -2,14 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-// ignore: unused_import
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 import 'package:becplugin/auth/authentication_service.dart';
 import 'package:becplugin/auth/sign_in_page.dart';
 import './home_page.dart';
-// ignore: unused_import
-import 'sys/flutterfire.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

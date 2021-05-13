@@ -1,9 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-// ignore: unused_import
-import 'package:provider/provider.dart';
-// ignore: unused_import
-import 'package:becplugin/sys/flutterfire.dart';
 
 final TextEditingController name = TextEditingController();
 final TextEditingController cmpny = TextEditingController();
@@ -75,7 +71,7 @@ class _AddDataState extends State<AddData> {
                 ),
                 SizedBox(height: 50.0),
                 GestureDetector(
-                  onTap: () {
+                  onTap: () async {
                     add();
                   },
                   child: LayoutBuilder(
