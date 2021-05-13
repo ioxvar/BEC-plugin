@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:provider/provider.dart';
 // ignore: unused_import
 import 'package:becplugin/sys/flutterfire.dart';
@@ -17,7 +18,11 @@ class _AddDataState extends State<AddData> {
   Map data;
 
   add() {
-    Map<String, dynamic> data = {"name": "Keanu", "occupation": "🐐"};
+    Map<String, dynamic> data = {
+      "name": name.text,
+      "occupation": cmpny.text,
+      "age": agein.text,
+    };
     CollectionReference collectionReference =
         FirebaseFirestore.instance.collection('test');
     collectionReference.add(data);

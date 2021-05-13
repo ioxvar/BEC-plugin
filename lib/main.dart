@@ -29,12 +29,6 @@ class MyApp extends StatelessWidget {
           create: (context) =>
               context.read<AuthenticationService>().authStateChanges,
         ),
-        /**
-      !!!!Resolve this!!!!
-     * Provider<AddUser>(
-     *     create: (_) => AddUser(fullName, company, age)
-     *   ),
-      */
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
