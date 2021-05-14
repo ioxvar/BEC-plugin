@@ -62,7 +62,12 @@ class _AddDataState extends State<AddData> {
                 SizedBox(height: 50.0),
                 GestureDetector(
                   onTap: () async {
-                    add();
+                    if (name.text != "") {
+                      add();
+                      Navigator.of(context).pop();
+                    } else {
+                      Navigator.of(context).pop();
+                    }
                   },
                   child: LayoutBuilder(
                     builder:
