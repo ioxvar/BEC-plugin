@@ -26,16 +26,14 @@ class _FetchDataState extends State<FetchData> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.teal,
-          title: Text('Fetch'),
-          elevation: 1.0,
-        ),
-        body: Center(
-          child: Text('FETCH FROM HERE'),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+        title: Text('Fetch'),
+        elevation: 1.0,
+      ),
+      body: Center(
+        child: Text('FETCH FROM HERE'),
       ),
     );
   }
