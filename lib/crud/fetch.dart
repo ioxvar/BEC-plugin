@@ -9,6 +9,7 @@ class FetchData extends StatefulWidget {
 }
 
 class _FetchDataState extends State<FetchData> {
+  /*
   Map data;
 
   fetch() {
@@ -17,21 +18,24 @@ class _FetchDataState extends State<FetchData> {
     collectionReference.snapshots().listen((snapshot) {
       List documents;
       setState(() {
-        //data = snapshot.documents[0].test;
+        data = snapshot.documents[0].test;
       });
     });
   }
+  */
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.teal,
-        title: Text('Fetch'),
-        elevation: 1.0,
-      ),
-      body: Center(
-        child: Text('FETCH FROM HERE'),
+    return SingleChildScrollView(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: Text('Fetch'),
+          elevation: 1.0,
+        ),
+        body: Center(
+          child: Text('FETCH FROM HERE'),
+        ),
       ),
     );
   }

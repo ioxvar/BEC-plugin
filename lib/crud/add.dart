@@ -26,77 +26,68 @@ class _AddDataState extends State<AddData> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.teal,
-        title: Text('Add'),
-        elevation: 1.0,
-      ),
-      body: Center(
-        child: Container(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              children: <Widget>[
-                TextFormField(
-                  controller: name,
-                  decoration: const InputDecoration(
-                    // icon: Icon(Icons.person),
-                    hintText: 'What do people call you?',
-                    labelText: 'Name',
+    return SingleChildScrollView(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: Text('Add'),
+          elevation: 1.0,
+        ),
+        body: Center(
+          child: Container(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children: <Widget>[
+                  TextFormField(
+                    controller: name,
+                    decoration: const InputDecoration(
+                      hintText: 'What do people call you?',
+                      labelText: 'Name',
+                    ),
                   ),
-                  // onSaved: (String value) {
-
-                  //   },
-                  // validator: (String value) {
-                  //   return (value != null && value.contains('@'))
-                  //       ? 'Do not use the @ char.'
-                  //       : null;
-                  // },
-                ),
-                TextFormField(
-                  controller: cmpny,
-                  decoration: const InputDecoration(
-                    //icon: Icon(Icons.person),
-                    hintText: 'Where do you work?',
-                    labelText: 'Company',
+                  TextFormField(
+                    controller: cmpny,
+                    decoration: const InputDecoration(
+                      hintText: 'Where do you work?',
+                      labelText: 'Company',
+                    ),
                   ),
-                ),
-                TextFormField(
-                  controller: agein,
-                  decoration: const InputDecoration(
-                    //icon: Icon(Icons.person),
-                    hintText: 'Enter your age',
-                    labelText: 'Age',
+                  TextFormField(
+                    controller: agein,
+                    decoration: const InputDecoration(
+                      hintText: 'Enter your age',
+                      labelText: 'Age',
+                    ),
                   ),
-                ),
-                SizedBox(height: 50.0),
-                GestureDetector(
-                  onTap: () async {
-                    add();
-                  },
-                  child: LayoutBuilder(
-                    builder:
-                        (BuildContext context, BoxConstraints constraints) {
-                      return Container(
-                          height: 40.0,
-                          width: 120.0,
-                          child: Material(
-                              borderRadius: BorderRadius.circular(30.0),
-                              shadowColor: Colors.teal[600],
-                              color: Colors.teal[600],
-                              elevation: 7.0,
-                              child: Center(
-                                  child: Text('ADD DATA',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'Montserrat')))));
+                  SizedBox(height: 50.0),
+                  GestureDetector(
+                    onTap: () async {
+                      add();
                     },
+                    child: LayoutBuilder(
+                      builder:
+                          (BuildContext context, BoxConstraints constraints) {
+                        return Container(
+                            height: 40.0,
+                            width: 120.0,
+                            child: Material(
+                                borderRadius: BorderRadius.circular(30.0),
+                                shadowColor: Colors.teal[600],
+                                color: Colors.teal[600],
+                                elevation: 7.0,
+                                child: Center(
+                                    child: Text('ADD DATA',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Montserrat')))));
+                      },
+                    ),
                   ),
-                ),
-              ],
-            )),
+                ],
+              )),
+        ),
       ),
     );
   }
