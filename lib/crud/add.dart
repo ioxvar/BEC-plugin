@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 final TextEditingController name = TextEditingController();
 final TextEditingController cmpny = TextEditingController();
 final TextEditingController agein = TextEditingController();
+final TextEditingController docid = TextEditingController();
 
 final adder = FirebaseFirestore.instance;
 
@@ -14,14 +15,19 @@ class AddData extends StatefulWidget {
 
 class _AddDataState extends State<AddData> {
   add() {
-    adder.collection("test").add({
+    /*
+    USE IN CASE SORTING BY USER_ID
+    var user = FirebaseAuth.instance.currentUser;
+    */
+    adder.collection("test").doc(docid.text).set({
+      "USN": docid.text,
       "name": name.text,
       "age": agein.text,
       "occupation": cmpny.text,
-      "email": "example@example.com",
-      "address": {"street": "street 24", "city": "new york"}
-    }).then((value) {
-      print(value.id);
+      "email": "someid@gmail.com",
+      "address": {"street": "street 41", "city": "helsinki"}
+    }).then((_) {
+      print("Added!");
     });
   }
 
@@ -39,6 +45,13 @@ class _AddDataState extends State<AddData> {
             padding: EdgeInsets.all(20),
             child: Column(
               children: <Widget>[
+                TextFormField(
+                  controller: docid,
+                  decoration: const InputDecoration(
+                    hintText: 'Enter USN',
+                    labelText: 'USN',
+                  ),
+                ),
                 TextFormField(
                   controller: name,
                   decoration: const InputDecoration(
