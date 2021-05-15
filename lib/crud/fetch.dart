@@ -39,7 +39,18 @@ class _FetchDataState extends State<FetchData> {
                   adder.collection("test").doc(docid.text).get().then((value) {
                     if (value != null) {
                       print(value.data());
-                    } else {
+                    }
+                    /*
+                    Implement when/if subcollection mapping is figured out
+                    if (adder
+                            .collection("test")
+                            .doc(semester.text)
+                            .collection("semester")
+                            .doc(semester.text) !=
+                        null) {
+                      print("EXISTS");
+                    }*/
+                    else {
                       return "Data does not exist";
                     }
                   });

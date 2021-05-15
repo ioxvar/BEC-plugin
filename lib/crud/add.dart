@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 final TextEditingController name = TextEditingController();
-final TextEditingController cmpny = TextEditingController();
-final TextEditingController agein = TextEditingController();
+final TextEditingController semester = TextEditingController();
+final TextEditingController branch = TextEditingController();
 final TextEditingController docid = TextEditingController();
 
 final adder = FirebaseFirestore.instance;
@@ -12,6 +12,8 @@ class AddData extends StatefulWidget {
   @override
   _AddDataState createState() => _AddDataState();
 }
+
+int val = 1;
 
 class _AddDataState extends State<AddData> {
   add() {
@@ -22,12 +24,96 @@ class _AddDataState extends State<AddData> {
     adder.collection("test").doc(docid.text).set({
       "USN": docid.text,
       "name": name.text,
-      "age": agein.text,
-      "occupation": cmpny.text,
+      "branch": branch.text,
+      "semester": semester.text,
       "email": "someid@gmail.com",
-      "address": {"street": "street 41", "city": "helsinki"}
+
+      /*
+      Sub collection (mapping inside  DOCUMENT would be better) >>> this
+      Currently can't figure out how to create a collection inside a document
+      Use that when resolved ig
+      */
+      "sem1": {
+        "sub1": 15,
+        "sub2": 10,
+        "sub3": 9,
+        "sub4": 15,
+        "sub5": 10,
+        "sub6": 9,
+      },
+      "sem2": {
+        "sub1": 15,
+        "sub2": 10,
+        "sub3": 9,
+        "sub4": 15,
+        "sub5": 10,
+        "sub6": 9,
+      },
+      "sem3": {
+        "sub1": 15,
+        "sub2": 10,
+        "sub3": 9,
+        "sub4": 15,
+        "sub5": 10,
+        "sub6": 9,
+      },
+      "sem4": {
+        "sub1": 15,
+        "sub2": 10,
+        "sub3": 9,
+        "sub4": 15,
+        "sub5": 10,
+        "sub6": 9,
+      },
+      "sem5": {
+        "sub1": 15,
+        "sub2": 10,
+        "sub3": 9,
+        "sub4": 15,
+        "sub5": 10,
+        "sub6": 9,
+      },
+      "sem6": {
+        "sub1": 15,
+        "sub2": 10,
+        "sub3": 9,
+        "sub4": 15,
+        "sub5": 10,
+        "sub6": 9,
+      },
+      "sem7": {
+        "sub1": 15,
+        "sub2": 10,
+        "sub3": 9,
+        "sub4": 15,
+        "sub5": 10,
+        "sub6": 9,
+      },
+      "sem8": {
+        "sub1": 15,
+        "sub2": 10,
+        "sub3": 9,
+        "sub4": 15,
+        "sub5": 10,
+        "sub6": 9,
+      }
     }).then((_) {
       print("Added!");
+      /*
+      adder.collection("test")
+          .doc(semester.text)
+          .collection("semester")
+          .doc(semester.text)
+          .set({
+        "sem": {
+          "sub1": 15,
+          "sub2": 10,
+          "sub3": 9,
+          "sub4": 15,
+          "sub5": 10,
+          "sub6": 9,
+        },
+      });*/
     });
   }
 
@@ -60,17 +146,17 @@ class _AddDataState extends State<AddData> {
                   ),
                 ),
                 TextFormField(
-                  controller: cmpny,
+                  controller: semester,
                   decoration: const InputDecoration(
-                    hintText: 'Where do you work?',
-                    labelText: 'Company',
+                    //hintText: '',
+                    labelText: 'Semester',
                   ),
                 ),
                 TextFormField(
-                  controller: agein,
+                  controller: branch,
                   decoration: const InputDecoration(
-                    hintText: 'Enter your age',
-                    labelText: 'Age',
+                    hintText: 'Enter course/branch',
+                    labelText: 'Branch',
                   ),
                 ),
                 SizedBox(height: 50.0),
