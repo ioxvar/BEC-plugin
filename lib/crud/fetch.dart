@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'add.dart';
 
 final CollectionReference users = FirebaseFirestore.instance.collection('test');
 Stream collectionStream =
@@ -22,15 +23,25 @@ class _FetchDataState extends State<FetchData> {
       ),
       body: Center(
         child: Container(
+          padding: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
+              TextFormField(
+                controller: docid,
+                decoration: const InputDecoration(
+                  hintText: 'Enter USN',
+                  labelText: 'USN',
+                ),
+              ),
               SizedBox(height: 80.0),
               GestureDetector(
                 onTap: () async {
-                  users.get().then((querySnapshot) {
-                    querySnapshot.docs.forEach((result) {
-                      print(result.data());
-                    });
+                  adder.collection("test").doc(docid.text).get().then((value) {
+                    if (value != null) {
+                      print(value.data());
+                    } else {
+                      return "Data does not exist";
+                    }
                   });
                 },
                 child: LayoutBuilder(

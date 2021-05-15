@@ -16,7 +16,7 @@ class AddData extends StatefulWidget {
 class _AddDataState extends State<AddData> {
   add() {
     /*
-    USE IN CASE SORTING BY USER_ID
+    USE IN CASE SORTING BY USER_ID, not really necessary
     var user = FirebaseAuth.instance.currentUser;
     */
     adder.collection("test").doc(docid.text).set({
