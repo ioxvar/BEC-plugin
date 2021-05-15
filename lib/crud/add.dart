@@ -5,23 +5,24 @@ final TextEditingController name = TextEditingController();
 final TextEditingController cmpny = TextEditingController();
 final TextEditingController agein = TextEditingController();
 
+final adder = FirebaseFirestore.instance;
+
 class AddData extends StatefulWidget {
   @override
   _AddDataState createState() => _AddDataState();
 }
 
 class _AddDataState extends State<AddData> {
-  Map data;
-
   add() {
-    Map<String, dynamic> data = {
+    adder.collection("test").add({
       "name": name.text,
-      "occupation": cmpny.text,
       "age": agein.text,
-    };
-    CollectionReference collectionReference =
-        FirebaseFirestore.instance.collection('test');
-    collectionReference.add(data);
+      "occupation": cmpny.text,
+      "email": "example@example.com",
+      "address": {"street": "street 24", "city": "new york"}
+    }).then((value) {
+      print(value.id);
+    });
   }
 
   @override
