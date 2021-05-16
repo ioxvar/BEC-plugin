@@ -63,7 +63,6 @@ class AddDataState extends State<AddData> {
                     labelText: 'USN',
                   ),
                 ),
-                //Padding(padding: EdgeInsets.fromLTRB(100, 90, 20, 30)),
                 TextFormField(
                   controller: name,
                   decoration: const InputDecoration(
@@ -92,222 +91,246 @@ class AddDataState extends State<AddData> {
                     decoration: TextDecoration.underline,
                   ),
                 ),
-                SizedBox(height: 30.0),
-                Container(
-                  height: 40.0,
-                  width: 200,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(Choice(1));
-                      },
-                      child: Center(
-                        child: Text('Semester 1',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
+                Padding(padding: EdgeInsets.only(top: 40)),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 40.0,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                    width: 1.0),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(Choice(1));
+                              },
+                              child: Center(
+                                child: Text('Semester 1',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat')),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30.0),
-                Container(
-                  height: 40.0,
-                  width: 200,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(Choice(2));
-                      },
-                      child: Center(
-                        child: Text('Semester 2',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
+                      Expanded(
+                        child: Container(
+                          height: 40.0,
+                          width: 200,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                    width: 1.0),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(Choice(2));
+                              },
+                              child: Center(
+                                child: Text('Semester 2',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat')),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    ]),
+                Padding(padding: EdgeInsets.only(top: 40)),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 40.0,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                    width: 1.0),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(Choice(3));
+                              },
+                              child: Center(
+                                child: Text('Semester 3',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat')),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30.0),
-                Container(
-                  height: 40.0,
-                  width: 200,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(Choice(3));
-                      },
-                      child: Center(
-                        child: Text('Semester 3',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
+                      Expanded(
+                        child: Container(
+                          height: 40.0,
+                          width: 200,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                    width: 1.0),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(Choice(4));
+                              },
+                              child: Center(
+                                child: Text('Semester 4',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat')),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    ]),
+                Padding(padding: EdgeInsets.only(top: 40)),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 40.0,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                    width: 1.0),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(Choice(5));
+                              },
+                              child: Center(
+                                child: Text('Semester 5',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat')),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30.0),
-                Container(
-                  height: 40.0,
-                  width: 200,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(Choice(4));
-                      },
-                      child: Center(
-                        child: Text('Semester 4',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
+                      Expanded(
+                        child: Container(
+                          height: 40.0,
+                          width: 200,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                    width: 1.0),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(Choice(6));
+                              },
+                              child: Center(
+                                child: Text('Semester 6',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat')),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    ]),
+                Padding(padding: EdgeInsets.only(top: 40)),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 40.0,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                    width: 1.0),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(Choice(7));
+                              },
+                              child: Center(
+                                child: Text('Semester 7',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat')),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30.0),
-                Container(
-                  height: 40.0,
-                  width: 200,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(Choice(5));
-                      },
-                      child: Center(
-                        child: Text('Semester 5',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30.0),
-                Container(
-                  height: 40.0,
-                  width: 200,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(Choice(6));
-                      },
-                      child: Center(
-                        child: Text('Semester 6',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30.0),
-                Container(
-                  height: 40.0,
-                  width: 200,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(Choice(7));
-                      },
-                      child: Center(
-                        child: Text('Semester 7',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30.0),
-                Container(
-                  height: 40.0,
-                  width: 200,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: Colors.black,
-                            style: BorderStyle.solid,
-                            width: 1.0),
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20.0)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(Choice(8));
-                      },
-                      child: Center(
-                        child: Text('Semester 8',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat')),
-                      ),
-                    ),
-                  ),
-                ),
+                      Expanded(
+                        child: Container(
+                          height: 40.0,
+                          width: 200,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.black,
+                                    style: BorderStyle.solid,
+                                    width: 1.0),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(Choice(8));
+                              },
+                              child: Center(
+                                child: Text('Semester 8',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat')),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    ]),
               ],
             ),
           ),
