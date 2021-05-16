@@ -17,7 +17,7 @@ class _SideBarState extends State<SideBar> {
   Widget build(BuildContext context) {
     var drawerHeader = UserAccountsDrawerHeader(
         decoration: BoxDecoration(
-          color: Colors.teal[600],
+          color: Colors.teal[700],
         ),
         accountName: Text('User Name'),
         accountEmail: Text('user.name@email.com'),
@@ -71,7 +71,7 @@ class _SideBarState extends State<SideBar> {
     );
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.teal[700],
           title: const Text('Home'),
         ),
         body: Center(

@@ -1,23 +1,52 @@
 import 'package:flutter/material.dart';
 import './sem1.dart';
+import './sem2.dart';
 import '../crud/add.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final adder = FirebaseFirestore.instance;
+final TextEditingController a1 = TextEditingController();
+final TextEditingController a2 = TextEditingController();
+final TextEditingController a3 = TextEditingController();
+final TextEditingController a4 = TextEditingController();
+final TextEditingController a5 = TextEditingController();
+final TextEditingController a6 = TextEditingController();
+final TextEditingController b1 = TextEditingController();
+final TextEditingController b2 = TextEditingController();
+final TextEditingController b3 = TextEditingController();
+final TextEditingController b4 = TextEditingController();
+final TextEditingController b5 = TextEditingController();
+final TextEditingController b6 = TextEditingController();
 
-class Sem3 extends StatelessWidget {
+class Seb3 extends StatelessWidget {
   add() {
     adder.collection("test").doc(docid.text).set({
       "USN": docid.text,
       "Name": name.text,
       "Branch": branch.text,
-      "Semester 3": {
+      "Semester 1": {
         s1.text: m1.text,
         s2.text: m2.text,
         s3.text: m3.text,
         s4.text: m4.text,
         s5.text: m5.text,
         s6.text: m6.text,
+      },
+      "Semester 2": {
+        ss1.text: mm1.text,
+        ss2.text: mm2.text,
+        ss3.text: mm3.text,
+        ss4.text: mm4.text,
+        ss5.text: mm5.text,
+        ss6.text: mm6.text,
+      },
+      "Semester 3": {
+        a1.text: b1.text,
+        a2.text: b2.text,
+        a3.text: b3.text,
+        a4.text: b4.text,
+        a5.text: b5.text,
+        a6.text: b6.text,
       },
     }).then(
       (_) {
@@ -47,7 +76,7 @@ class Sem3 extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        controller: s1,
+                        controller: a1,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 1',
                           labelText: 'Subject 1',
@@ -57,7 +86,7 @@ class Sem3 extends StatelessWidget {
                     //Spacer(flex: 2),
                     Expanded(
                       child: TextFormField(
-                        controller: m1,
+                        controller: b1,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 1',
                           labelText: 'Marks',
@@ -72,7 +101,7 @@ class Sem3 extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        controller: s2,
+                        controller: a2,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 2',
                           labelText: 'Subject 2',
@@ -82,7 +111,7 @@ class Sem3 extends StatelessWidget {
                     //Spacer(flex: 2),
                     Expanded(
                       child: TextFormField(
-                        controller: m2,
+                        controller: b2,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 2',
                           labelText: 'Marks',
@@ -97,7 +126,7 @@ class Sem3 extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        controller: s3,
+                        controller: a3,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 3',
                           labelText: 'Subject 3',
@@ -107,7 +136,7 @@ class Sem3 extends StatelessWidget {
                     //Spacer(flex: 2),
                     Expanded(
                       child: TextFormField(
-                        controller: m3,
+                        controller: b3,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 3',
                           labelText: 'Marks',
@@ -122,7 +151,7 @@ class Sem3 extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        controller: s4,
+                        controller: a4,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 4',
                           labelText: 'Subject 4',
@@ -132,7 +161,7 @@ class Sem3 extends StatelessWidget {
                     //Spacer(flex: 2),
                     Expanded(
                       child: TextFormField(
-                        controller: m4,
+                        controller: b4,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 4',
                           labelText: 'Marks',
@@ -147,7 +176,7 @@ class Sem3 extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        controller: s5,
+                        controller: a5,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 5',
                           labelText: 'Subject 5',
@@ -157,7 +186,7 @@ class Sem3 extends StatelessWidget {
                     //Spacer(flex: 2),
                     Expanded(
                       child: TextFormField(
-                        controller: m5,
+                        controller: b5,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 5',
                           labelText: 'Marks',
@@ -172,7 +201,7 @@ class Sem3 extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        controller: s6,
+                        controller: a6,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 6',
                           labelText: 'Subject 6',
@@ -182,7 +211,7 @@ class Sem3 extends StatelessWidget {
                     //Spacer(flex: 2),
                     Expanded(
                       child: TextFormField(
-                        controller: m6,
+                        controller: b6,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 6',
                           labelText: 'Marks',
