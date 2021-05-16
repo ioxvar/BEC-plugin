@@ -17,7 +17,7 @@ final TextEditingController mm4 = TextEditingController();
 final TextEditingController mm5 = TextEditingController();
 final TextEditingController mm6 = TextEditingController();
 
-class Semm2 extends StatelessWidget {
+class Sem2 extends StatelessWidget {
   add() {
     adder.collection("test").doc(docid.text).set({
       "USN": docid.text,

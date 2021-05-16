@@ -18,7 +18,7 @@ final TextEditingController b4 = TextEditingController();
 final TextEditingController b5 = TextEditingController();
 final TextEditingController b6 = TextEditingController();
 
-class Seb3 extends StatelessWidget {
+class Sem3 extends StatelessWidget {
   add() {
     adder.collection("test").doc(docid.text).set({
       "USN": docid.text,

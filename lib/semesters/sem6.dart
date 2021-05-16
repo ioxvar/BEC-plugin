@@ -82,7 +82,7 @@ add() {
   );
 }
 
-class Seh6 extends StatelessWidget {
+class Sem6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
