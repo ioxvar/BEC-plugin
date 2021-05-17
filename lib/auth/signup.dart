@@ -2,8 +2,14 @@ import './authentication_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class SignupPage extends StatelessWidget {
+class SignupPage extends StatefulWidget {
+  @override
+  _SignupPageState createState() => _SignupPageState();
+}
+
+class _SignupPageState extends State<SignupPage> {
   final TextEditingController emailController = TextEditingController();
+
   final TextEditingController passwordController = TextEditingController();
 
   @override
@@ -41,38 +47,33 @@ class SignupPage extends StatelessWidget {
                       TextField(
                         controller: emailController,
                         decoration: InputDecoration(
+                            hintText: 'something@email.com',
+                            hintStyle: TextStyle(color: Colors.grey[400]),
                             labelText: 'EMAIL',
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey),
                             focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
+                                borderSide:
+                                    BorderSide(color: Colors.teal[600]))),
                       ),
                       SizedBox(height: 10.0),
                       TextField(
                         controller: passwordController,
                         decoration: InputDecoration(
+                            hintText: '6+ characters',
+                            hintStyle: TextStyle(color: Colors.grey[400]),
                             labelText: 'PASSWORD ',
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey),
                             focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
+                                borderSide:
+                                    BorderSide(color: Colors.teal[600]))),
                         obscureText: true,
                       ),
-                      /*   SizedBox(height: 10.0),
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: 'NAME ',
-                        labelStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
-                  ),*/
                       SizedBox(height: 50.0),
                       Container(
                           height: 40.0,

@@ -1,16 +1,48 @@
-# bec plugin
+<p align="center">
+  <a href="" rel="noopener">
+ </p>
 
-A new Flutter application.
+<h2 align="center">BEC Plugin</h2>
 
-## Getting Started
+<div align="center">
 
-This project is a starting point for a Flutter application.
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/ioxvar/BEC-plugin/pulls)
 
-A few resources to get you started if this is your first Flutter project:
+</div>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+---
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center"> An app I made for my University using Flutter and Firebase.
+    <br> 
+</p>
+
+## 📝 Table of Contents
+
+- [About](#about)
+- [Built Using](#built_using)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
+
+## 🧐 About <a name = "about"></a>
+
+
+The purpose of this app was to help my professors manage student records in an organized manner. BEC Plugin allows a professor to store student data semester-wise, and everything's stored on the cloud, so one doesn't have to worry about maintaining files or excel sheets.
+
+Using Flutter for development also allowed me to build a cross-platform app that is compatible with Android and iOS users. Flutter for web is not implemented here.
+
+
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [Flutter](https://flutter.dev) - Framework
+- [Dart](https://dart.dev) -  UI
+- [Firebase](https://firebase.google.com) - Server Environment
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [@ioxvar](https://github.com/ioxvar) - Development
+
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+
+- Hat tip to anyone whose code was used

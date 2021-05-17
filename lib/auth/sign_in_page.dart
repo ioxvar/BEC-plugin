@@ -3,13 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './signup.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
+  @override
+  _SignInPageState createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    var logojpg = new AssetImage("assets/logo.jpg");
+    var logojpg = new AssetImage("assets/logobec.png");
     var img = new Image(
       image: logojpg,
       width: 420,
@@ -57,6 +62,8 @@ class SignInPage extends StatelessWidget {
                       TextField(
                         controller: emailController,
                         decoration: InputDecoration(
+                            hintText: 'something@email.com',
+                            hintStyle: TextStyle(color: Colors.grey[400]),
                             labelText: 'EMAIL',
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
@@ -70,6 +77,8 @@ class SignInPage extends StatelessWidget {
                       TextField(
                         controller: passwordController,
                         decoration: InputDecoration(
+                            hintText: '6+ characters',
+                            hintStyle: TextStyle(color: Colors.grey[400]),
                             labelText: 'PASSWORD',
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
@@ -113,9 +122,6 @@ class SignInPage extends StatelessWidget {
                     return Container(
                         height: 40.0,
                         width: 120.0,
-                        //color: Colors.red,
-
-                        // height: 50.0,
                         child: Material(
                             borderRadius: BorderRadius.circular(30.0),
                             shadowColor: Colors.teal[600],
