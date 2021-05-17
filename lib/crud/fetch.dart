@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'add.dart';
+// ignore: unused_import
+import 'package:becplugin/semesters/chosen.dart';
 
 class FetchData extends StatefulWidget {
   @override
@@ -33,7 +35,8 @@ class _FetchDataState extends State<FetchData> {
                 onTap: () async {
                   adder.collection("test").doc(docid.text).get().then((value) {
                     if (value != null) {
-                      print(value.data());
+                      Navigator.of(context).push(Choice(10));
+                      //Text(value.toString());
                     } else {
                       return "Data does not exist";
                     }

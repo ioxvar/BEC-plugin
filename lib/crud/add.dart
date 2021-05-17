@@ -9,13 +9,6 @@ final TextEditingController semester = TextEditingController();
 final TextEditingController branch = TextEditingController();
 final TextEditingController docid = TextEditingController();
 
-List<TextEditingController> sub = [
-  for (int i = 1; i < 50; i++) TextEditingController()
-];
-List<TextEditingController> sem = [
-  for (int i = 1; i < 9; i++) TextEditingController()
-];
-
 class AddData extends StatefulWidget {
   @override
   AddDataState createState() => AddDataState();
@@ -59,17 +52,15 @@ class AddDataState extends State<AddData> {
                 TextFormField(
                   controller: docid,
                   decoration: const InputDecoration(
-                    hintText: 'Enter USN',
+                    hintText: 'Enter Student USN',
                     labelText: 'USN',
                   ),
                 ),
                 TextFormField(
                   controller: name,
                   decoration: const InputDecoration(
-                    // contentPadding: EdgeInsets.only(
-                    //   left: 10), //Change this value to custom as you like
                     //   isDense: true,
-                    hintText: 'What do people call you?',
+                    hintText: 'Enter Student Name',
                     labelText: 'Name',
                   ),
                 ),

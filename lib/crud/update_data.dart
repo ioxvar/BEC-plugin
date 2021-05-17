@@ -41,10 +41,7 @@ class UpdateDataState extends State<Update> {
                 TextFormField(
                   controller: name,
                   decoration: const InputDecoration(
-                    // contentPadding: EdgeInsets.only(
-                    //   left: 10), //Change this value to custom as you like
-                    //   isDense: true,
-                    hintText: 'What do people call you?',
+                    hintText: 'Enter Student USN',
                     labelText: 'Name',
                   ),
                 ),
