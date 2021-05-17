@@ -1,9 +1,8 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.flaticon.com/free-icon/socket_3175790" alt="Bot logo"></a>
-</p>
+ </p>
 
-<h3 align="center">BEC Plugin</h3>
+<h2 align="center">BEC Plugin</h2>
 
 <div align="center">
 
