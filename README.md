@@ -2,7 +2,7 @@
   <a href="" rel="noopener">
  </p>
 
-<h3 align="center">Project Title</h3>
+<h2 align="center">BEC Plugin</h2>
 
 <div align="center">
 
