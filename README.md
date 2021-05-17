@@ -47,4 +47,3 @@ Using Flutter for development also allowed me to build a cross-platform app that
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - Hat tip to anyone whose code was used
-- References - [Official Documentations] https://flutter.dev 
