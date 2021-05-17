@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'add.dart';
-
-final CollectionReference users = FirebaseFirestore.instance.collection('test');
-Stream collectionStream =
-    FirebaseFirestore.instance.collection('test').snapshots();
-//Stream documentStream = FirebaseFirestore.instance.collection('users').doc('ABC123').snapshots();
 
 class FetchData extends StatefulWidget {
   @override
