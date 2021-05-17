@@ -27,7 +27,7 @@
 ## 🧐 About <a name = "about"></a>
 
 
-The purpose of this app was to help my professors manage student records in an organized manner. BEC Plugin allows a professor to store student data semester-wise, and everything's stored on the cloud, so one doesn't have to worry about maintaining files or excel sheets.
+I built this app to help my professors manage student records in an organized manner. BEC Plugin allows a professor to store student data semester-wise, and everything's stored on the cloud, so one doesn't have to worry about maintaining files or excel sheets.
 
 Using Flutter for development also allowed me to build a cross-platform app that is compatible with Android and iOS users. Flutter for web is not implemented here.
 
