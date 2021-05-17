@@ -13,7 +13,7 @@
 
 ---
 
-<p align="center"> An app I made for my University Project using Flutter and Firebase.
+<p align="center"> An app I made for my University using Flutter and Firebase.
     <br> 
 </p>
 
