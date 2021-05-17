@@ -22,12 +22,7 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
@@ -53,5 +48,4 @@ Using Flutter for development also allowed me to build a cross-platform app that
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - Hat tip to anyone whose code was used
-- Inspiration
-- References - [Official Documentation] (https://flutter.dev)
+- References - [Official Documentations] https://flutter.dev 
