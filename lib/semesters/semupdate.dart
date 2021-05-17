@@ -24,19 +24,21 @@ class SemUpdate extends StatefulWidget {
 
 class _Sem1State extends State<SemUpdate> {
   add() {
-    adder.collection("test").doc(docid.text).set({
-      "USN": docid.text,
-      "Name": name.text,
-      "Branch": branch.text,
-      "Semester 1": {
-        x1.text: y1.text,
-        x2.text: y2.text,
-        x3.text: y3.text,
-        x4.text: y4.text,
-        x5.text: y5.text,
-        x6.text: y6.text,
+    adder.collection("test").doc(docid.text).update(
+      {
+        "USN": docid.text,
+        "Name": name.text,
+        "Branch": branch.text,
+        "Semester 1": {
+          x1.text: y1.text,
+          x2.text: y2.text,
+          x3.text: y3.text,
+          x4.text: y4.text,
+          x5.text: y5.text,
+          x6.text: y6.text,
+        },
       },
-    }).then(
+    ).then(
       (_) {
         print("Added!");
       },

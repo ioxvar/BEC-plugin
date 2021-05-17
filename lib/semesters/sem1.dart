@@ -24,19 +24,22 @@ class Sem1 extends StatefulWidget {
 
 class _Sem1State extends State<Sem1> {
   add() {
-    adder.collection("test").doc(docid.text).set({
-      "USN": docid.text,
-      "Name": name.text,
-      "Branch": branch.text,
-      "Semester 1": {
-        s1.text: m1.text,
-        s2.text: m2.text,
-        s3.text: m3.text,
-        s4.text: m4.text,
-        s5.text: m5.text,
-        s6.text: m6.text,
+    adder.collection("test").doc(docid.text).set(
+      {
+        "USN": docid.text,
+        "Name": name.text,
+        "Branch": branch.text,
+        "Semester 1": {
+          s1.text: m1.text,
+          s2.text: m2.text,
+          s3.text: m3.text,
+          s4.text: m4.text,
+          s5.text: m5.text,
+          s6.text: m6.text,
+        },
       },
-    }).then(
+      SetOptions(merge: true),
+    ).then(
       (_) {
         print("Added!");
       },
