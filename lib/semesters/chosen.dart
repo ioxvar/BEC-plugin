@@ -8,6 +8,7 @@ import './sem5.dart';
 import './sem6.dart';
 import './sem7.dart';
 import './sem8.dart';
+import './semupdate.dart';
 
 class Choice extends MaterialPageRoute<void> {
   Choice(int id)
@@ -43,6 +44,9 @@ class Choice extends MaterialPageRoute<void> {
 
               case 8:
                 return Sem8();
+                break;
+              case 9:
+                return SemUpdate();
                 break;
               default:
                 return Scaffold(
