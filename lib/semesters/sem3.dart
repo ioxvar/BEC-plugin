@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import './sem1.dart';
-import './sem2.dart';
 import '../crud/add.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -20,26 +18,7 @@ final TextEditingController b6 = TextEditingController();
 
 class Sem3 extends StatelessWidget {
   add() {
-    adder.collection("test").doc(docid.text).set({
-      "USN": docid.text,
-      "Name": name.text,
-      "Branch": branch.text,
-      "Semester 1": {
-        s1.text: m1.text,
-        s2.text: m2.text,
-        s3.text: m3.text,
-        s4.text: m4.text,
-        s5.text: m5.text,
-        s6.text: m6.text,
-      },
-      "Semester 2": {
-        ss1.text: mm1.text,
-        ss2.text: mm2.text,
-        ss3.text: mm3.text,
-        ss4.text: mm4.text,
-        ss5.text: mm5.text,
-        ss6.text: mm6.text,
-      },
+    adder.collection("test").doc(docid.text).update({
       "Semester 3": {
         a1.text: b1.text,
         a2.text: b2.text,
