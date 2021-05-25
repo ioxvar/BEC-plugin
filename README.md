@@ -4,13 +4,6 @@
 
 <h2 align="center">BEC Plugin</h2>
 
-<div align="center">
-
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/ioxvar/BEC-plugin/pulls)
-
-</div>
-
 ---
 
 <p align="center"> An app I made for my University using Flutter and Firebase.
