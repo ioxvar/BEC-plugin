@@ -17,7 +17,7 @@ class _SideBarState extends State<SideBar> {
   Widget build(BuildContext context) {
     var drawerHeader = UserAccountsDrawerHeader(
         decoration: BoxDecoration(
-          color: Colors.teal[700],
+          color: Colors.teal[600],
         ),
         accountName: Text('User Name'),
         accountEmail: Text('user.name@email.com'),
@@ -27,7 +27,7 @@ class _SideBarState extends State<SideBar> {
               style: TextStyle(
                   fontSize: 25.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.cyan[700])),
+                  color: Colors.teal[600])),
         ));
     final drawerItems = ListView(
       children: <Widget>[
