@@ -2,7 +2,7 @@
   <a href="" rel="noopener">
  </p>
 
-<h2 align="center">BEC Plugin</h2>
+<h2 align="center">BEC Plugin🔌</h2>
 
 ---
 
