@@ -71,7 +71,7 @@ class _SideBarState extends State<SideBar> {
     );
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.teal[700],
+          backgroundColor: Colors.teal[600],
           title: const Text('Home'),
         ),
         body: SingleChildScrollView(
