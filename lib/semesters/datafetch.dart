@@ -32,12 +32,16 @@ class Fetch extends StatelessWidget {
               }
 
               if (snapshot.hasData && !snapshot.data.exists) {
-                return Text(
-                  "Data does not exist",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Montserrat',
+                return Padding(
+                  padding: EdgeInsets.fromLTRB(105, 350, 100, 20),
+                  child: Text(
+                    "Data does not exist",
+                    style: TextStyle(
+                      color: Colors.teal[600],
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Montserrat',
+                    ),
                   ),
                 );
               }
