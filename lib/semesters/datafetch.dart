@@ -81,7 +81,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nSemester 1: ${data['Semester 1']}",
+                              "\n                     Semester 1:\n ${data['Semester 1']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -89,7 +89,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nSemester 2: ${data['Semester 2']}",
+                              "\n                     Semester 2:\n ${data['Semester 2']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -97,7 +97,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nSemester 3: ${data['Semester 3']}",
+                              "\n                     Semester 3:\n ${data['Semester 3']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nSemester 4: ${data['Semester 4']}",
+                              "\nSemester 4:\n ${data['Semester 4']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -113,7 +113,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nSemester 5: ${data['Semester 5']}",
+                              "\nSemester 5:\n ${data['Semester 5']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -121,7 +121,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nSemester 6: ${data['Semester 6']}",
+                              "\nSemester 6:\n ${data['Semester 6']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nSemester 7: ${data['Semester 7']}",
+                              "\nSemester 7:\n ${data['Semester 7']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -137,7 +137,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nSemester 8: ${data['Semester 8']}",
+                              "\nSemester 8:\n ${data['Semester 8']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
