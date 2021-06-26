@@ -14,8 +14,6 @@
 
 - [About](#about)
 - [Built Using](#built_using)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
@@ -32,10 +30,3 @@ Using Flutter for development also allowed me to build a cross-platform app that
 - [Dart](https://dart.dev) -  UI
 - [Firebase](https://firebase.google.com) - Server Environment
 
-## ✍️ Authors <a name = "authors"></a>
-
-- [@ioxvar](https://github.com/ioxvar) - Development
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
