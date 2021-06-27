@@ -28,7 +28,6 @@ class DeleteData extends StatelessWidget {
                 onTap: () async {
                   adder.collection("test").doc(docid.text).delete().then((_) {
                     print('deleted');
-                    Navigator.of(context).pop();
                   });
                   Navigator.of(context).pop();
                 },
