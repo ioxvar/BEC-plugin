@@ -1,9 +1,10 @@
 import 'package:becplugin/auth/authentication_service.dart';
+import 'package:becplugin/auth/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'crud/newpages.dart';
-import 'crud/profile.dart';
+//import './sign_in_page.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({Key key}) : super(key: key);
@@ -19,8 +20,8 @@ class _SideBarState extends State<SideBar> {
         decoration: BoxDecoration(
           color: Colors.teal[600],
         ),
-        accountName: Text(profnameController.text),
-        accountEmail: Text(mailController.text),
+        accountName: Text(nameController.text),
+        accountEmail: Text("chanel"),
         currentAccountPicture: CircleAvatar(
           backgroundColor: Colors.white,
           child: Text('UN',
@@ -58,6 +59,7 @@ class _SideBarState extends State<SideBar> {
           title: const Text('DELETE'),
           onTap: () => Navigator.of(context).push(NewPage(4)),
         ),
+
         TextButton.icon(
           onPressed: () {
             context.read<AuthenticationService>().signOut();
