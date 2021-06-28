@@ -2,7 +2,6 @@ import './authentication_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-  final TextEditingController nameController = TextEditingController();
 class SignupPage extends StatefulWidget {
   @override
   SignupPageState createState() => SignupPageState();
@@ -73,20 +72,6 @@ class SignupPageState extends State<SignupPage> {
                                 borderSide:
                                     BorderSide(color: Colors.teal[600]))),
                         obscureText: true,
-                      ),
-                      SizedBox(height: 10.0),
-                      TextField(
-                        controller: nameController,
-                        decoration: InputDecoration(
-                            hintText: 'Enter your name',
-                            hintStyle: TextStyle(color: Colors.grey[400]),
-                            labelText: 'Name',
-                            labelStyle: TextStyle(
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
                       ),
                       SizedBox(height: 50.0),
                       Container(

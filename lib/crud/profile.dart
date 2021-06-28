@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
+final TextEditingController profnameController = TextEditingController();
+final TextEditingController deptController = TextEditingController();
+final TextEditingController mailController = TextEditingController();
+
 class ProfilePage extends StatefulWidget {
   @override
   ProfilePageState createState() => ProfilePageState();
 }
 
 class ProfilePageState extends State<ProfilePage> {
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController deptController = TextEditingController();
-  final TextEditingController mailController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -43,7 +43,7 @@ class ProfilePageState extends State<ProfilePage> {
                 child: Column(
                   children: <Widget>[
                     TextField(
-                      controller: nameController,
+                      controller: profnameController,
                       decoration: InputDecoration(
                           hintText: 'Enter your name',
                           hintStyle: TextStyle(color: Colors.grey[400]),
@@ -68,7 +68,6 @@ class ProfilePageState extends State<ProfilePage> {
                               color: Colors.grey),
                           focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.teal[600]))),
-                      obscureText: true,
                     ),
                     SizedBox(height: 10.0),
                     TextField(
@@ -86,27 +85,28 @@ class ProfilePageState extends State<ProfilePage> {
                     ),
                     SizedBox(height: 50.0),
                     Container(
-                        height: 40.0,
-                        child: Material(
-                          borderRadius: BorderRadius.circular(20.0),
-                          shadowColor: Colors.teal.shade600,
-                          color: Colors.teal[600],
-                          elevation: 7.0,
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Center(
-                              child: Text(
-                                'SAVE',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Montserrat'),
-                              ),
+                      height: 40.0,
+                      child: Material(
+                        borderRadius: BorderRadius.circular(20.0),
+                        shadowColor: Colors.teal.shade600,
+                        color: Colors.teal[600],
+                        elevation: 7.0,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Center(
+                            child: Text(
+                              'SAVE',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat'),
                             ),
                           ),
-                        ),),
+                        ),
+                      ),
+                    ),
                     SizedBox(height: 20.0),
                     Container(
                       height: 40.0,
