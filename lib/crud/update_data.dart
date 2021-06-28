@@ -41,7 +41,7 @@ class UpdateDataState extends State<Update> {
                 TextFormField(
                   controller: name,
                   decoration: const InputDecoration(
-                    hintText: 'Enter Student name',
+                    hintText: 'Enter Student USN',
                     labelText: 'Name',
                   ),
                 ),
