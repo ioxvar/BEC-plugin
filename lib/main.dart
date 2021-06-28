@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:becplugin/auth/authentication_service.dart';
 import 'package:becplugin/auth/sign_in_page.dart';
 import './home_page.dart';
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();

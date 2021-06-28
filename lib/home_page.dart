@@ -1,4 +1,5 @@
 import 'package:becplugin/auth/authentication_service.dart';
+import 'package:becplugin/auth/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
@@ -19,8 +20,8 @@ class _SideBarState extends State<SideBar> {
         decoration: BoxDecoration(
           color: Colors.teal[600],
         ),
-        accountName: Text('User Name'),
-        accountEmail: Text('user.name@email.com'),
+        accountName: Text(nameController.text),
+        accountEmail: Text("chanel"),
         currentAccountPicture: CircleAvatar(
           backgroundColor: Colors.white,
           child: Text('UN',
@@ -33,6 +34,11 @@ class _SideBarState extends State<SideBar> {
       children: <Widget>[
         Align(),
         drawerHeader,
+        ListTile(
+          leading: Icon(Icons.portrait_sharp),
+          title: const Text('PROFILE'),
+          onTap: () => Navigator.of(context).push(NewPage(5)),
+        ),
         ListTile(
           leading: Icon(Icons.add_sharp),
           title: const Text('ADD'),
@@ -54,12 +60,6 @@ class _SideBarState extends State<SideBar> {
           onTap: () => Navigator.of(context).push(NewPage(4)),
         ),
 
-        /*ListTile(
-          title: const Text('SIGN OUT'),
-          onTap: () {
-            context.read<AuthenticationService>().signOut();
-          },
-        ),*/
         TextButton.icon(
           onPressed: () {
             context.read<AuthenticationService>().signOut();

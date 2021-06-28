@@ -1,17 +1,16 @@
-import './authentication_service.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-  final TextEditingController nameController = TextEditingController();
-class SignupPage extends StatefulWidget {
+
+class ProfilePage extends StatefulWidget {
   @override
-  SignupPageState createState() => SignupPageState();
+  ProfilePageState createState() => ProfilePageState();
 }
 
-class SignupPageState extends State<SignupPage> {
+class ProfilePageState extends State<ProfilePage> {
+  final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
-
+  
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -98,15 +97,11 @@ class SignupPageState extends State<SignupPage> {
                             elevation: 7.0,
                             child: GestureDetector(
                               onTap: () {
-                                context.read<AuthenticationService>().signUp(
-                                      email: emailController.text.trim(),
-                                      password: passwordController.text.trim(),
-                                    );
                                 Navigator.of(context).pop();
                               },
                               child: Center(
                                 child: Text(
-                                  'SIGNUP',
+                                  'SAVE',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,

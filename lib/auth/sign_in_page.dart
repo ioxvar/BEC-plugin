@@ -5,10 +5,10 @@ import './signup.dart';
 
 class SignInPage extends StatefulWidget {
   @override
-  _SignInPageState createState() => _SignInPageState();
+  SignInPageState createState() => SignInPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class SignInPageState extends State<SignInPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -45,7 +45,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     Container(
                       padding: EdgeInsets.fromLTRB(132.0, 250.0, 0.0, 0.0),
-                      child: Text('Helper',
+                      child: Text('Advisor',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.teal[600].withOpacity(1),
