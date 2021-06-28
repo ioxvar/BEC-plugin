@@ -16,19 +16,22 @@ class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
     var drawerHeader = UserAccountsDrawerHeader(
-        decoration: BoxDecoration(
-          color: Colors.teal[600],
+      decoration: BoxDecoration(
+        color: Colors.teal[600],
+      ),
+      accountName: Text(profnameController.text),
+      accountEmail: Text(mailController.text),
+      currentAccountPicture: CircleAvatar(
+        backgroundColor: Colors.white,
+        child: Text(
+          'UN',
+          style: TextStyle(
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.teal[600]),
         ),
-        accountName: Text(profnameController.text),
-        accountEmail: Text(mailController.text),
-        currentAccountPicture: CircleAvatar(
-          backgroundColor: Colors.white,
-          child: Text('UN',
-              style: TextStyle(
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.teal[600])),
-        ));
+      ),
+    );
     final drawerItems = ListView(
       children: <Widget>[
         Align(),
@@ -71,6 +74,13 @@ class _SideBarState extends State<SideBar> {
         appBar: AppBar(
           backgroundColor: Colors.teal[600],
           title: const Text('Home'),
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.portrait_sharp),
+                onPressed: () {
+                  Navigator.of(context).push(NewPage(5));
+                }),
+          ],
         ),
         body: SingleChildScrollView(
           child: ConstrainedBox(
