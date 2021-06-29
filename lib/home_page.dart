@@ -15,19 +15,28 @@ class SideBar extends StatefulWidget {
 class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
+    var logojpg = new AssetImage("assets/logobec.png");
+    var img = new Image(
+      image: logojpg,
+      width: 50,
+    );
     var drawerHeader = UserAccountsDrawerHeader(
         decoration: BoxDecoration(
           color: Colors.teal[600],
         ),
-        accountName: Text('User Name'),
-        accountEmail: Text('user.name@email.com'),
+        accountName: Text(
+          'BEC User',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+        ),
+        accountEmail: Text(
+          'becuser@becbgk.edu',
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+        ),
         currentAccountPicture: CircleAvatar(
           backgroundColor: Colors.white,
-          child: Text('UN',
-              style: TextStyle(
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.teal[600])),
+          child: Container(
+            child: img,
+          ),
         ));
     final drawerItems = ListView(
       children: <Widget>[
