@@ -85,7 +85,7 @@ class _SignInPageState extends State<SignInPage> {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey),
                             focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
+                                borderSide: BorderSide(color: Colors.teal))),
                         obscureText: true,
                       ),
                       SizedBox(height: 5.0),
