@@ -45,7 +45,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     Container(
                       padding: EdgeInsets.fromLTRB(132.0, 250.0, 0.0, 0.0),
-                      child: Text('Helper',
+                      child: Text('Adviser',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.teal[600].withOpacity(1),
