@@ -29,14 +29,14 @@ class _Sem1State extends State<Sem1> {
         "USN": docid.text,
         "Name": name.text,
         "Branch": branch.text,
-        "Semester 1": {
-          s1.text: m1.text,
-          s2.text: m2.text,
-          s3.text: m3.text,
-          s4.text: m4.text,
-          s5.text: m5.text,
-          s6.text: m6.text,
-        },
+        "Semester 1": [
+          {s1.text: m1.text, "grade":"A"},
+          {s2.text: m2.text, "grade":"A"},
+          {s3.text: m3.text, "grade":"A"},
+          {s4.text: m4.text, "grade":"A"},
+          {s5.text: m5.text, "grade":"A"},
+          {s6.text: m6.text, "grade":"A"},
+        ]
       },
       SetOptions(merge: true),
     ).then(
