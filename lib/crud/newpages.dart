@@ -3,6 +3,7 @@ import 'package:becplugin/crud/add.dart';
 import 'package:becplugin/crud/delete.dart';
 import 'package:becplugin/crud/update_data.dart';
 import 'package:flutter/material.dart';
+import './profile.dart';
 //import 'package:provider/provider.dart';
 
 //import '../flutterfire.dart';
@@ -28,6 +29,10 @@ class NewPage extends MaterialPageRoute<void> {
               return DeleteData();
               break;
 
+            case 5:
+              return ProfilePage();
+              break;
+
             default:
               return Scaffold(
                 appBar: AppBar(
@@ -40,5 +45,5 @@ class NewPage extends MaterialPageRoute<void> {
                 ),
               );
           }
-        });
+        },);
 }

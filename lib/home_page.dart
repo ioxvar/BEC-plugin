@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'crud/newpages.dart';
-//import './sign_in_page.dart';
+import 'crud/profile.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({Key key}) : super(key: key);
@@ -15,33 +15,32 @@ class SideBar extends StatefulWidget {
 class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
-    var logojpg = new AssetImage("assets/logobec.png");
-    var img = new Image(
-      image: logojpg,
-      width: 50,
-    );
     var drawerHeader = UserAccountsDrawerHeader(
-        decoration: BoxDecoration(
-          color: Colors.teal[600],
+      decoration: BoxDecoration(
+        color: Colors.teal[600],
+      ),
+      accountName: Text(profnameController.text),
+      accountEmail: Text(mailController.text),
+      currentAccountPicture: CircleAvatar(
+        backgroundColor: Colors.white,
+        child: Text(
+          'UN',
+          style: TextStyle(
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.teal[600]),
         ),
-        accountName: Text(
-          'BEC User',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-        ),
-        accountEmail: Text(
-          'becuser@becbgk.edu',
-          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
-        ),
-        currentAccountPicture: CircleAvatar(
-          backgroundColor: Colors.white,
-          child: Container(
-            child: img,
-          ),
-        ));
+      ),
+    );
     final drawerItems = ListView(
       children: <Widget>[
         Align(),
         drawerHeader,
+        ListTile(
+          leading: Icon(Icons.portrait_sharp),
+          title: const Text('PROFILE'),
+          onTap: () => Navigator.of(context).push(NewPage(5)),
+        ),
         ListTile(
           leading: Icon(Icons.add_sharp),
           title: const Text('ADD'),
@@ -62,13 +61,6 @@ class _SideBarState extends State<SideBar> {
           title: const Text('DELETE'),
           onTap: () => Navigator.of(context).push(NewPage(4)),
         ),
-
-        /*ListTile(
-          title: const Text('SIGN OUT'),
-          onTap: () {
-            context.read<AuthenticationService>().signOut();
-          },
-        ),*/
         TextButton.icon(
           onPressed: () {
             context.read<AuthenticationService>().signOut();
@@ -82,6 +74,13 @@ class _SideBarState extends State<SideBar> {
         appBar: AppBar(
           backgroundColor: Colors.teal[600],
           title: const Text('Home'),
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.portrait_sharp),
+                onPressed: () {
+                  Navigator.of(context).push(NewPage(5));
+                }),
+          ],
         ),
         body: SingleChildScrollView(
           child: ConstrainedBox(
