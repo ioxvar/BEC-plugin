@@ -214,7 +214,7 @@ class _Sem1State extends State<Sem1> {
                 SizedBox(height: 50.0),
                 GestureDetector(
                   onTap: () async {
-                    if (name.text != "") {
+                    if (docid.text != "") {
                       add();
                       Navigator.of(context).pop();
                     } else {
