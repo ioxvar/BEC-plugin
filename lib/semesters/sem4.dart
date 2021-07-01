@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../crud/add.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import './sem1.dart';
 
 final adder = FirebaseFirestore.instance;
 final TextEditingController c1 = TextEditingController();
@@ -17,35 +18,19 @@ final TextEditingController d5 = TextEditingController();
 final TextEditingController d6 = TextEditingController();
 
 class Sem4 extends StatelessWidget {
-  grader(sub) {
-    var m = int.parse(sub);
-    if (m >= 90) {
-      return "S";
-    } else if (m >= 80) {
-      return "A";
-    } else if (m >= 70) {
-      return "B";
-    } else if (m >= 60) {
-      return "C";
-    } else if (m >= 50) {
-      return "D";
-    } else if (m >= 40) {
-      return "E";
-    } else if (m < 40) {
-      return "F";
-    } else
-      return "W";
-  }
-
+  
   add() {
     adder.collection("test").doc(docid.text).update({
       "Semester 4": {
-        c1.text: d1.text + " (" + grader(d1.text) + ")",
-        c2.text: d2.text + " (" + grader(d2.text) + ")",
-        c3.text: d3.text + " (" + grader(d3.text) + ")",
-        c4.text: d4.text + " (" + grader(d4.text) + ")",
-        c5.text: d5.text + " (" + grader(d5.text) + ")",
-        c6.text: d6.text + " (" + grader(d6.text) + ")",
+        "\n"+c1.text.toLowerCase(): d1.text + " (" + grader(d1.text) + ")",
+        "\n"+c2.text.toLowerCase(): d2.text + " (" + grader(d2.text) + ")",
+        "\n"+c3.text.toLowerCase(): d3.text + " (" + grader(d3.text) + ")",
+        "\n"+c4.text.toLowerCase(): d4.text + " (" + grader(d4.text) + ")",
+        "\n"+c5.text.toLowerCase(): d5.text + " (" + grader(d5.text) + ")",
+        "\n"+c6.text.toLowerCase(): d6.text + " (" + grader(d6.text) + ")",
+      "\nPercentage":
+              percent(d1.text, d2.text, d3.text, d4.text, d5.text, d6.text),
+        
       },
     }).then(
       (_) {

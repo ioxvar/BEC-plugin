@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../crud/add.dart';
+import './sem1.dart';
 
 final TextEditingController k1 = TextEditingController();
 final TextEditingController k2 = TextEditingController();
@@ -41,12 +42,14 @@ class Sem8 extends StatelessWidget {
   add() {
     adder.collection("test").doc(docid.text).update({
       "Semester 8": {
-        k1.text: l1.text + " (" + grader(l1.text) + ")",
-        k2.text: l2.text + " (" + grader(l2.text) + ")",
-        k3.text: l3.text + " (" + grader(l3.text) + ")",
-        k4.text: l4.text + " (" + grader(l4.text) + ")",
-        k5.text: l5.text + " (" + grader(l5.text) + ")",
-        k6.text: l6.text + " (" + grader(l6.text) + ")",
+        "\n" + k1.text.toLowerCase(): l1.text + " (" + grader(l1.text) + ")",
+        "\n" + k2.text.toLowerCase(): l2.text + " (" + grader(l2.text) + ")",
+        "\n" + k3.text.toLowerCase(): l3.text + " (" + grader(l3.text) + ")",
+        "\n" + k4.text.toLowerCase(): l4.text + " (" + grader(l4.text) + ")",
+        "\n" + k5.text.toLowerCase(): l5.text + " (" + grader(l5.text) + ")",
+        "\n" + k6.text.toLowerCase(): l6.text + " (" + grader(l6.text) + ")",
+        "\nPercentage":
+            percent(l1.text, l2.text, l3.text, l4.text, l5.text, l6.text),
       },
     }).then(
       (_) {

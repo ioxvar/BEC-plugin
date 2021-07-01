@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../crud/add.dart';
-
+import './sem1.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final adder = FirebaseFirestore.instance;
@@ -41,12 +41,15 @@ class Sem5 extends StatelessWidget {
   add() {
     adder.collection("test").doc(docid.text).update({
       "Semester 5": {
-        e1.text: f1.text + " (" + grader(f1.text) + ")",
-        e2.text: f2.text + " (" + grader(f2.text) + ")",
-        e3.text: f3.text + " (" + grader(f3.text) + ")",
-        e4.text: f4.text + " (" + grader(f4.text) + ")",
-        e5.text: f5.text + " (" + grader(f5.text) + ")",
-        e6.text: f6.text + " (" + grader(f6.text) + ")",
+        "\n"+e1.text.toLowerCase(): f1.text + " (" + grader(f1.text) + ")",
+        "\n"+e2.text.toLowerCase(): f2.text + " (" + grader(f2.text) + ")",
+        "\n"+e3.text.toLowerCase(): f3.text + " (" + grader(f3.text) + ")",
+        "\n"+e4.text.toLowerCase(): f4.text + " (" + grader(f4.text) + ")",
+        "\n"+e5.text.toLowerCase(): f5.text + " (" + grader(f5.text) + ")",
+        "\n"+e6.text.toLowerCase(): f6.text + " (" + grader(f6.text) + ")",
+     "\nPercentage":
+              percent(f1.text, f2.text, f3.text, f4.text, f5.text, f6.text),
+        
       },
     }).then(
       (_) {
