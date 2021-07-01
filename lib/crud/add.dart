@@ -49,7 +49,7 @@ class AddDataState extends State<AddData> {
             padding: EdgeInsets.all(20),
             child: Column(
               children: <Widget>[
-                TextField(
+                TextFormField(
                   controller: docid,
                   decoration: const InputDecoration(
                     hintText: 'Enter Student USN',

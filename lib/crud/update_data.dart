@@ -31,7 +31,7 @@ class UpdateDataState extends State<Update> {
             padding: EdgeInsets.all(20),
             child: Column(
               children: <Widget>[
-                TextField(
+                TextFormField(
                   controller: docid,
                   decoration: const InputDecoration(
                     hintText: 'Enter USN',
