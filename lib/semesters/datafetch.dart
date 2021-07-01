@@ -17,7 +17,7 @@ class Fetch extends StatelessWidget {
         child: ConstrainedBox(
           constraints: BoxConstraints(),
           child: FutureBuilder<DocumentSnapshot>(
-            future: rcv.doc(docid.text).get(),
+            future: rcv.doc(docid.text.toUpperCase()).get(),
             builder: (BuildContext context,
                 AsyncSnapshot<DocumentSnapshot> snapshot) {
               if (snapshot.hasError) {

@@ -26,7 +26,7 @@ class DeleteData extends StatelessWidget {
               SizedBox(height: 80.0),
               GestureDetector(
                 onTap: () async {
-                  adder.collection("test").doc(docid.text).delete().then((_) {
+                  adder.collection("test").doc(docid.text.toUpperCase()).delete().then((_) {
                     print('deleted');
                   });
                   Navigator.of(context).pop();

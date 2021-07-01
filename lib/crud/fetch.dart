@@ -33,7 +33,7 @@ class _FetchDataState extends State<FetchData> {
               SizedBox(height: 80.0),
               GestureDetector(
                 onTap: () async {
-                  adder.collection("test").doc(docid.text).get().then((value) {
+                  adder.collection("test").doc(docid.text.toUpperCase()).get().then((value) {
                     if (value != null) {
                       Navigator.of(context).push(Choice(10));
                       //Text(value.toString());

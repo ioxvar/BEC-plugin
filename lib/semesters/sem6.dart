@@ -41,7 +41,7 @@ class Sem6 extends StatelessWidget {
   }
 
   add() {
-    adder.collection("test").doc(docid.text).update({
+    adder.collection("test").doc(docid.text.toUpperCase()).update({
       "Semester 6": {
        "\n"+ g1.text.toLowerCase(): h1.text + " (" + grader(h1.text) + ")",
         "\n"+g2.text.toLowerCase(): h2.text + " (" + grader(h2.text) + ")",

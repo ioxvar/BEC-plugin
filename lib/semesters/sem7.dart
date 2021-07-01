@@ -40,7 +40,7 @@ class Sem7 extends StatelessWidget {
   }
 
   add() {
-    adder.collection("test").doc(docid.text).update({
+    adder.collection("test").doc(docid.text.toUpperCase()).update({
       "Semester 7": {
         "\n" + i1.text.toLowerCase(): j1.text + " (" + grader(j1.text) + ")",
         "\n" + i2.text.toLowerCase(): j2.text + " (" + grader(j2.text) + ")",

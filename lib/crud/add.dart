@@ -20,9 +20,9 @@ class AddDataState extends State<AddData> {
     USE IN CASE SORTING BY USER_ID, not really necessary
     var user = FirebaseAuth.instance.currentUser;
     */
-    adder.collection("test").doc(docid.text).set(
+    adder.collection("test").doc(docid.text.toUpperCase()).set(
       {
-        "USN": docid.text,
+        "USN": docid.text.toUpperCase(),
         "Name": name.text,
         "Branch": branch.text,
       },

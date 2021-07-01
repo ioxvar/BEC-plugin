@@ -59,9 +59,9 @@ class Sem1 extends StatefulWidget {
 class _Sem1State extends State<Sem1> {
   
   add() {
-    adder.collection("test").doc(docid.text).set(
+    adder.collection("test").doc(docid.text.toUpperCase()).set(
       {
-        "USN": docid.text,
+        "USN": docid.text.toUpperCase(),
         "Name": name.text,
         "Branch": branch.text,
         "Semester 1": {

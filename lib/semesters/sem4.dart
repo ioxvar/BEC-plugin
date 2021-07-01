@@ -20,7 +20,7 @@ final TextEditingController d6 = TextEditingController();
 class Sem4 extends StatelessWidget {
   
   add() {
-    adder.collection("test").doc(docid.text).update({
+    adder.collection("test").doc(docid.text.toUpperCase()).update({
       "Semester 4": {
         "\n"+c1.text.toLowerCase(): d1.text + " (" + grader(d1.text) + ")",
         "\n"+c2.text.toLowerCase(): d2.text + " (" + grader(d2.text) + ")",
