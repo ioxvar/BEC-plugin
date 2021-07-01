@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 final TextEditingController profnameController = TextEditingController();
 final TextEditingController deptController = TextEditingController();
 final TextEditingController mailController = TextEditingController();
+String mailid, professor;
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -93,6 +94,8 @@ class ProfilePageState extends State<ProfilePage> {
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
+                            mailid = mailController.text;
+                            professor = profnameController.text;
                             Navigator.of(context).pop();
                           },
                           child: Center(

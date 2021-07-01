@@ -24,11 +24,11 @@ class _SideBarState extends State<SideBar> {
         color: Colors.teal[600],
       ),
       accountName: Text(
-        profnameController.text,
+        "BEC Faculty",
         style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
       ),
       accountEmail: Text(
-        mailController.text,
+        "Faculty@becbgk.edu",
         style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
       ),
       currentAccountPicture: CircleAvatar(
