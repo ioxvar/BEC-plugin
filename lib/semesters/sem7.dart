@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../crud/add.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import './sem1.dart';
 
 final adder = FirebaseFirestore.instance;
 
@@ -18,15 +19,37 @@ final TextEditingController j5 = TextEditingController();
 final TextEditingController j6 = TextEditingController();
 
 class Sem7 extends StatelessWidget {
+  grader(sub) {
+    var m = int.parse(sub);
+    if (m >= 90) {
+      return "S";
+    } else if (m >= 80) {
+      return "A";
+    } else if (m >= 70) {
+      return "B";
+    } else if (m >= 60) {
+      return "C";
+    } else if (m >= 50) {
+      return "D";
+    } else if (m >= 40) {
+      return "E";
+    } else if (m < 40) {
+      return "F";
+    } else
+      return "W";
+  }
+
   add() {
     adder.collection("test").doc(docid.text).update({
       "Semester 7": {
-        i1.text: j1.text,
-        i2.text: j2.text,
-        i3.text: j3.text,
-        i4.text: j4.text,
-        i5.text: j5.text,
-        i6.text: j6.text,
+        "\n" + i1.text.toLowerCase(): j1.text + " (" + grader(j1.text) + ")",
+        "\n" + i2.text.toLowerCase(): j2.text + " (" + grader(j2.text) + ")",
+        "\n" + i3.text.toLowerCase(): j3.text + " (" + grader(j3.text) + ")",
+        "\n" + i4.text.toLowerCase(): j4.text + " (" + grader(j4.text) + ")",
+        "\n" + i5.text.toLowerCase(): j5.text + " (" + grader(j5.text) + ")",
+        "\n" + i6.text.toLowerCase(): j6.text + " (" + grader(j6.text) + ")",
+        "\nPercentage":
+            percent(j1.text, j2.text, j3.text, j4.text, j5.text, j6.text),
       },
     }).then(
       (_) {
@@ -55,7 +78,7 @@ class Sem7 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: i1,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 1',
@@ -65,7 +88,7 @@ class Sem7 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: j1,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 1',
@@ -80,7 +103,7 @@ class Sem7 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: i2,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 2',
@@ -90,7 +113,7 @@ class Sem7 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: j2,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 2',
@@ -105,7 +128,7 @@ class Sem7 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: i3,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 3',
@@ -115,7 +138,7 @@ class Sem7 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: j3,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 3',
@@ -130,7 +153,7 @@ class Sem7 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: i4,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 4',
@@ -140,7 +163,7 @@ class Sem7 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: j4,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 4',
@@ -155,7 +178,7 @@ class Sem7 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: i5,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 5',
@@ -165,7 +188,7 @@ class Sem7 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: j5,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 5',
@@ -180,7 +203,7 @@ class Sem7 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: i6,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 6',
@@ -190,7 +213,7 @@ class Sem7 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: j6,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 6',

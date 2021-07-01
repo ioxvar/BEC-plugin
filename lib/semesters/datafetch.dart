@@ -56,8 +56,38 @@ class Fetch extends StatelessWidget {
                         padding: EdgeInsets.all(20),
                         child: Column(
                           children: <Widget>[
+                            ListTile(
+                              leading: Text(
+                                "Name: ${data['Name']}",
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            ListTile(
+                              leading: Text(
+                                "\nUSN: ${data['USN']}",
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            ListTile(
+                              leading: Text(
+                                "\nBranch: ${data['Branch']}",
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
                             Text(
-                              "Name: ${data['Name']}",
+                              "\nSemester 1:\n ${data['Semester 1']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -65,7 +95,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nUSN: ${data['USN']}",
+                              "\nSemester 2:\n ${data['Semester 2']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -73,31 +103,7 @@ class Fetch extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "\nBranch: ${data['Branch']}",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat',
-                              ),
-                            ),
-                            Text(
-                              "\n                     Semester 1:\n ${data['Semester 1']}",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat',
-                              ),
-                            ),
-                            Text(
-                              "\n                     Semester 2:\n ${data['Semester 2']}",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat',
-                              ),
-                            ),
-                            Text(
-                              "\n                     Semester 3:\n ${data['Semester 3']}",
+                              "\nSemester 3:\n ${data['Semester 3']}",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,

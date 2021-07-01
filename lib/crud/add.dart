@@ -56,7 +56,7 @@ class AddDataState extends State<AddData> {
                     labelText: 'USN',
                   ),
                 ),
-                TextFormField(
+                TextField(
                   controller: name,
                   decoration: const InputDecoration(
                     //   isDense: true,
@@ -64,7 +64,7 @@ class AddDataState extends State<AddData> {
                     labelText: 'Name',
                   ),
                 ),
-                TextFormField(
+                TextField(
                   controller: branch,
                   decoration: const InputDecoration(
                     hintText: 'Enter course/branch',
