@@ -62,11 +62,11 @@ class _SideBarState extends State<SideBar> {
       children: <Widget>[
         Align(),
         drawerHeader,
-        ListTile(
-          leading: Icon(Icons.portrait_sharp),
-          title: const Text('PROFILE'),
-          onTap: () => Navigator.of(context).push(NewPage(5)),
-        ),
+        // ListTile(
+        //   leading: Icon(Icons.portrait_sharp),
+        //   title: const Text('PROFILE'),
+        //   onTap: () => Navigator.of(context).push(NewPage(5)),
+        // ),
         ListTile(
           leading: Icon(Icons.add_sharp),
           title: const Text('ADD'),
@@ -100,13 +100,13 @@ class _SideBarState extends State<SideBar> {
         appBar: AppBar(
           backgroundColor: Colors.teal[600],
           title: const Text('Home'),
-          actions: <Widget>[
-            IconButton(
-                icon: Icon(Icons.portrait_sharp),
-                onPressed: () {
-                  Navigator.of(context).push(NewPage(5));
-                }),
-          ],
+          // actions: <Widget>[
+          //   IconButton(
+          //       icon: Icon(Icons.portrait_sharp),
+          //       onPressed: () {
+          //         Navigator.of(context).push(NewPage(5));
+          //       }),
+          // ],
         ),
         body: SingleChildScrollView(
           child: ConstrainedBox(
@@ -245,7 +245,7 @@ class _SideBarState extends State<SideBar> {
         ));
   }
 }
-
+/**
 final TextEditingController profnameController = TextEditingController();
 final TextEditingController deptController = TextEditingController();
 final TextEditingController mailController = TextEditingController();
@@ -392,3 +392,4 @@ class ProfilePageState extends State<ProfilePage> {
     );
   }
 }
+*/
