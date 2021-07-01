@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../crud/add.dart';
+import '../crud/update_data.dart';
 
 final adder = FirebaseFirestore.instance;
 
@@ -24,11 +25,11 @@ class SemUpdate extends StatefulWidget {
 
 class _Sem1State extends State<SemUpdate> {
   add() {
-    adder.collection("test").doc(docid.text).update(
+    adder.collection("test").doc(newusn.text).update(
       {
-        "USN": docid.text,
-        "Name": name.text,
-        "Branch": branch.text,
+        "USN": newusn.text,
+        "Name": newname.text,
+        "Branch": newbranch.text,
         "Semester 1": {
           x1.text: y1.text,
           x2.text: y2.text,

@@ -4,10 +4,10 @@ import 'package:becplugin/semesters/chosen.dart';
 
 final adder = FirebaseFirestore.instance;
 
-final TextEditingController name = TextEditingController();
+final TextEditingController newname = TextEditingController();
 final TextEditingController semester = TextEditingController();
-final TextEditingController branch = TextEditingController();
-final TextEditingController docid = TextEditingController();
+final TextEditingController newbranch = TextEditingController();
+final TextEditingController newusn = TextEditingController();
 
 class Update extends StatefulWidget {
   @override
@@ -32,21 +32,21 @@ class UpdateDataState extends State<Update> {
             child: Column(
               children: <Widget>[
                 TextFormField(
-                  controller: docid,
+                  controller: newusn,
                   decoration: const InputDecoration(
                     hintText: 'Enter USN',
                     labelText: 'USN',
                   ),
                 ),
                 TextField(
-                  controller: name,
+                  controller: newname,
                   decoration: const InputDecoration(
                     hintText: 'Enter Student Name',
                     labelText: 'Name',
                   ),
                 ),
                 TextField(
-                  controller: branch,
+                  controller: newbranch,
                   decoration: const InputDecoration(
                     hintText: 'Enter course/branch',
                     labelText: 'Branch',
