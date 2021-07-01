@@ -56,28 +56,34 @@ class Fetch extends StatelessWidget {
                         padding: EdgeInsets.all(20),
                         child: Column(
                           children: <Widget>[
-                            Text(
-                              "Name: ${data['Name']}",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat',
+                            ListTile(
+                              leading: Text(
+                                "Name: ${data['Name']}",
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat',
+                                ),
                               ),
                             ),
-                            Text(
-                              "\nUSN: ${data['USN']}",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat',
+                            ListTile(
+                              leading: Text(
+                                "\nUSN: ${data['USN']}",
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat',
+                                ),
                               ),
                             ),
-                            Text(
-                              "\nBranch: ${data['Branch']}",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Montserrat',
+                            ListTile(
+                              leading: Text(
+                                "\nBranch: ${data['Branch']}",
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat',
+                                ),
                               ),
                             ),
                             Text(
