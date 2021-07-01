@@ -55,7 +55,7 @@ class Sem6 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: g1,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 1',
@@ -65,7 +65,7 @@ class Sem6 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: h1,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 1',
@@ -80,7 +80,7 @@ class Sem6 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: g2,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 2',
@@ -90,7 +90,7 @@ class Sem6 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: h2,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 2',
@@ -105,7 +105,7 @@ class Sem6 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: g3,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 3',
@@ -115,7 +115,7 @@ class Sem6 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: h3,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 3',
@@ -130,7 +130,7 @@ class Sem6 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: g4,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 4',
@@ -140,7 +140,7 @@ class Sem6 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: h4,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 4',
@@ -155,7 +155,7 @@ class Sem6 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: g5,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 5',
@@ -165,7 +165,7 @@ class Sem6 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: h5,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 5',
@@ -180,7 +180,7 @@ class Sem6 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: g6,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 6',
@@ -190,7 +190,7 @@ class Sem6 extends StatelessWidget {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: h6,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 6',

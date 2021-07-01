@@ -65,7 +65,7 @@ class _Sem1State extends State<SemUpdate> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: x1,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 1',
@@ -75,7 +75,7 @@ class _Sem1State extends State<SemUpdate> {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: y1,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 1',
@@ -90,7 +90,7 @@ class _Sem1State extends State<SemUpdate> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: x2,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 2',
@@ -100,7 +100,7 @@ class _Sem1State extends State<SemUpdate> {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: y2,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 2',
@@ -115,7 +115,7 @@ class _Sem1State extends State<SemUpdate> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: x3,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 3',
@@ -125,7 +125,7 @@ class _Sem1State extends State<SemUpdate> {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: y3,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 3',
@@ -140,7 +140,7 @@ class _Sem1State extends State<SemUpdate> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: x4,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 4',
@@ -150,7 +150,7 @@ class _Sem1State extends State<SemUpdate> {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: y4,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 4',
@@ -165,7 +165,7 @@ class _Sem1State extends State<SemUpdate> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: x5,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 5',
@@ -175,7 +175,7 @@ class _Sem1State extends State<SemUpdate> {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: y5,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 5',
@@ -190,7 +190,7 @@ class _Sem1State extends State<SemUpdate> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: x6,
                         decoration: const InputDecoration(
                           hintText: 'Enter subject 6',
@@ -200,7 +200,7 @@ class _Sem1State extends State<SemUpdate> {
                     ),
                     //Spacer(flex: 2),
                     Expanded(
-                      child: TextFormField(
+                      child: TextField(
                         controller: y6,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 6',

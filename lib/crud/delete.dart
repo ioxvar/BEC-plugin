@@ -16,7 +16,7 @@ class DeleteData extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
-              TextFormField(
+              TextField(
                 controller: docid,
                 decoration: const InputDecoration(
                   hintText: 'Enter USN whose data you want to delete',

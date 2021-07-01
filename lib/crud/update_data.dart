@@ -31,21 +31,21 @@ class UpdateDataState extends State<Update> {
             padding: EdgeInsets.all(20),
             child: Column(
               children: <Widget>[
-                TextFormField(
+                TextField(
                   controller: docid,
                   decoration: const InputDecoration(
                     hintText: 'Enter USN',
                     labelText: 'USN',
                   ),
                 ),
-                TextFormField(
+                TextField(
                   controller: name,
                   decoration: const InputDecoration(
                     hintText: 'Enter Student Name',
                     labelText: 'Name',
                   ),
                 ),
-                TextFormField(
+                TextField(
                   controller: branch,
                   decoration: const InputDecoration(
                     hintText: 'Enter course/branch',

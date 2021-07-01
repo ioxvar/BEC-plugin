@@ -23,7 +23,7 @@ class _FetchDataState extends State<FetchData> {
           padding: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
-              TextFormField(
+              TextField(
                 controller: docid,
                 decoration: const InputDecoration(
                   hintText: 'Enter USN',
