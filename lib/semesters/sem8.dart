@@ -18,15 +18,35 @@ final TextEditingController l6 = TextEditingController();
 final adder = FirebaseFirestore.instance;
 
 class Sem8 extends StatelessWidget {
+  grader(sub) {
+    var m = int.parse(sub);
+    if (m >= 90) {
+      return "S";
+    } else if (m >= 80) {
+      return "A";
+    } else if (m >= 70) {
+      return "B";
+    } else if (m >= 60) {
+      return "C";
+    } else if (m >= 50) {
+      return "D";
+    } else if (m >= 40) {
+      return "E";
+    } else if (m < 40) {
+      return "F";
+    } else
+      return "W";
+  }
+
   add() {
     adder.collection("test").doc(docid.text).update({
       "Semester 8": {
-        k1.text: l1.text,
-        k2.text: l2.text,
-        k3.text: l3.text,
-        k4.text: l4.text,
-        k5.text: l5.text,
-        k6.text: l6.text,
+        k1.text: l1.text + " (" + grader(l1.text) + ")",
+        k2.text: l2.text + " (" + grader(l2.text) + ")",
+        k3.text: l3.text + " (" + grader(l3.text) + ")",
+        k4.text: l4.text + " (" + grader(l4.text) + ")",
+        k5.text: l5.text + " (" + grader(l5.text) + ")",
+        k6.text: l6.text + " (" + grader(l6.text) + ")",
       },
     }).then(
       (_) {

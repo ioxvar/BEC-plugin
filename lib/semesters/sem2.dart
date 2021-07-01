@@ -17,15 +17,35 @@ final TextEditingController mm5 = TextEditingController();
 final TextEditingController mm6 = TextEditingController();
 
 class Sem2 extends StatelessWidget {
+  grader(sub) {
+    var m = int.parse(sub);
+    if (m >= 90) {
+      return "S";
+    } else if (m >= 80) {
+      return "A";
+    } else if (m >= 70) {
+      return "B";
+    } else if (m >= 60) {
+      return "C";
+    } else if (m >= 50) {
+      return "D";
+    } else if (m >= 40) {
+      return "E";
+    } else if (m < 40) {
+      return "F";
+    } else
+      return "W";
+  }
+
   add() {
     adder.collection("test").doc(docid.text).update({
       "Semester 2": {
-        ss1.text: mm1.text,
-        ss2.text: mm2.text,
-        ss3.text: mm3.text,
-        ss4.text: mm4.text,
-        ss5.text: mm5.text,
-        ss6.text: mm6.text,
+        ss1.text: mm1.text + " (" + grader(mm1.text) + ")",
+        ss2.text: mm2.text + " (" + grader(mm2.text) + ")",
+        ss3.text: mm3.text + " (" + grader(mm3.text) + ")",
+        ss4.text: mm4.text + " (" + grader(mm4.text) + ")",
+        ss5.text: mm5.text + " (" + grader(mm5.text) + ")",
+        ss6.text: mm6.text + " (" + grader(mm6.text) + ")",
       },
     }).then(
       (_) {

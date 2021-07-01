@@ -17,24 +17,44 @@ final TextEditingController h4 = TextEditingController();
 final TextEditingController h5 = TextEditingController();
 final TextEditingController h6 = TextEditingController();
 
-add() {
-  adder.collection("test").doc(docid.text).update({
-    "Semester 6": {
-      g1.text: h1.text,
-      g2.text: h2.text,
-      g3.text: h3.text,
-      g4.text: h4.text,
-      g5.text: h5.text,
-      g6.text: h6.text,
-    },
-  }).then(
-    (_) {
-      print("Added!");
-    },
-  );
-}
-
 class Sem6 extends StatelessWidget {
+  grader(sub) {
+    var m = int.parse(sub);
+    if (m >= 90) {
+      return "S";
+    } else if (m >= 80) {
+      return "A";
+    } else if (m >= 70) {
+      return "B";
+    } else if (m >= 60) {
+      return "C";
+    } else if (m >= 50) {
+      return "D";
+    } else if (m >= 40) {
+      return "E";
+    } else if (m < 40) {
+      return "F";
+    } else
+      return "W";
+  }
+
+  add() {
+    adder.collection("test").doc(docid.text).update({
+      "Semester 6": {
+        g1.text: h1.text + " (" + grader(h1.text) + ")",
+        g2.text: h2.text + " (" + grader(h2.text) + ")",
+        g3.text: h3.text + " (" + grader(h3.text) + ")",
+        g4.text: h4.text + " (" + grader(h4.text) + ")",
+        g5.text: h5.text + " (" + grader(h5.text) + ")",
+        g6.text: h6.text + " (" + grader(h6.text) + ")",
+      },
+    }).then(
+      (_) {
+        print("Added!");
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

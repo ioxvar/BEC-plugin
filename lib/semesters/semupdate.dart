@@ -24,6 +24,26 @@ class SemUpdate extends StatefulWidget {
 }
 
 class _Sem1State extends State<SemUpdate> {
+  grader(sub) {
+    var m = int.parse(sub);
+    if (m >= 90) {
+      return "S";
+    } else if (m >= 80) {
+      return "A";
+    } else if (m >= 70) {
+      return "B";
+    } else if (m >= 60) {
+      return "C";
+    } else if (m >= 50) {
+      return "D";
+    } else if (m >= 40) {
+      return "E";
+    } else if (m < 40) {
+      return "F";
+    } else
+      return "W";
+  }
+
   add() {
     adder.collection("test").doc(newusn.text).update(
       {
@@ -31,12 +51,12 @@ class _Sem1State extends State<SemUpdate> {
         "Name": newname.text,
         "Branch": newbranch.text,
         "Semester 1": {
-          x1.text: y1.text,
-          x2.text: y2.text,
-          x3.text: y3.text,
-          x4.text: y4.text,
-          x5.text: y5.text,
-          x6.text: y6.text,
+          x1.text: y1.text + " (" + grader(y1.text) + ")",
+          x2.text: y2.text + " (" + grader(y2.text) + ")",
+          x3.text: y3.text + " (" + grader(y3.text) + ")",
+          x4.text: y4.text + " (" + grader(y4.text) + ")",
+          x5.text: y5.text + " (" + grader(y5.text) + ")",
+          x6.text: y6.text + " (" + grader(y6.text) + ")",
         },
       },
     ).then(
