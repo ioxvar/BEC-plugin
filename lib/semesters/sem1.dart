@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../crud/add.dart';
+import 'dart:convert';
 
 final adder = FirebaseFirestore.instance;
 
@@ -23,20 +24,41 @@ class Sem1 extends StatefulWidget {
 }
 
 class _Sem1State extends State<Sem1> {
+  grader(sub) {
+
+    var m = int.parse(sub);
+    if (m >= 90) {
+      return "S";
+    } else if (m >= 80) {
+      return "A";
+    } else if (m >= 70) {
+     return "B";
+    } else if (m >= 60) {
+     return "C";
+    } else if (m >= 50) {
+    return  "D";
+    } else if (m >= 40) {
+    return "E";
+    } else if (m < 40) {
+    return "F";
+    } else
+    return "W";
+  }
+
   add() {
     adder.collection("test").doc(docid.text).set(
       {
         "USN": docid.text,
         "Name": name.text,
         "Branch": branch.text,
-        "Semester 1": [
-          {s1.text: m1.text, "grade":"A"},
-          {s2.text: m2.text, "grade":"A"},
-          {s3.text: m3.text, "grade":"A"},
-          {s4.text: m4.text, "grade":"A"},
-          {s5.text: m5.text, "grade":"A"},
-          {s6.text: m6.text, "grade":"A"},
-        ]
+        "Semester 1": {
+          s1.text: m1.text +" ("+grader(m1.text) +")",
+          s2.text: m2.text+" ("+grader(m2.text) +")",
+          s3.text: m3.text+" ("+grader(m3.text) +")",
+          s4.text: m4.text+" ("+grader(m4.text) +")",
+          s5.text: m5.text+" ("+grader(m5.text) +")",
+          s6.text: m6.text+" ("+grader(m6.text) +")",
+        },
       },
       SetOptions(merge: true),
     ).then(
