@@ -30,26 +30,26 @@ percent(q, w, e, r, t, y) {
   percentage = (sum / 600) * 100;
   return percentage.toString();
 }
-grader(sub) {
-    var m = int.parse(sub);
-    if (m >= 90) {
-      return "S";
-    } else if (m >= 80) {
-      return "A";
-    } else if (m >= 70) {
-      return "B";
-    } else if (m >= 60) {
-      return "C";
-    } else if (m >= 50) {
-      return "D";
-    } else if (m >= 40) {
-      return "E";
-    } else if (m < 40) {
-      return "F";
-    } else
-      return "W";
-  }
 
+grader(sub) {
+  var m = int.parse(sub);
+  if (m >= 90) {
+    return "S";
+  } else if (m >= 80) {
+    return "A";
+  } else if (m >= 70) {
+    return "B";
+  } else if (m >= 60) {
+    return "C";
+  } else if (m >= 50) {
+    return "D";
+  } else if (m >= 40) {
+    return "E";
+  } else if (m < 40) {
+    return "F";
+  } else
+    return "W";
+}
 
 class Sem1 extends StatefulWidget {
   @override
@@ -57,7 +57,6 @@ class Sem1 extends StatefulWidget {
 }
 
 class _Sem1State extends State<Sem1> {
-  
   add() {
     adder.collection("test").doc(docid.text.toUpperCase()).set(
       {
@@ -83,6 +82,15 @@ class _Sem1State extends State<Sem1> {
     );
   }
 
+  String subject;
+  List choice = [
+    "Constitution",
+    "Mathematics 1",
+    "Electrical",
+    "Physics",
+    "C Programming",
+    "English",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,12 +111,24 @@ class _Sem1State extends State<Sem1> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Expanded(
-                      child: TextFormField(
-                        controller: s1,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter subject 1',
-                          labelText: 'Subject 1',
-                        ),
+                      child: DropdownButtonFormField(
+                        //controller: m1,
+                        hint: Text("Select subject 1"),
+                        dropdownColor: Colors.white,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 36,
+                        value: subject,
+                        onChanged: (newValue) {
+                          setState(() {
+                            subject = newValue;
+                          });
+                        },
+                        items: choice.map(
+                          (valueItem) {
+                            return DropdownMenuItem(
+                                value: valueItem, child: Text(valueItem));
+                          },
+                        ).toList(),
                       ),
                     ),
                     //Spacer(flex: 2),
