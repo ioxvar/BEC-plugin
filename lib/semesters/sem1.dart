@@ -50,8 +50,6 @@ class Sem1 extends StatefulWidget {
   _Sem1State createState() => _Sem1State();
 }
 
-String s1, s2, s3, s4, s5, s6;
-
 class _Sem1State extends State<Sem1> {
   add() {
     adder.collection("test").doc(docid.text.toUpperCase()).set(
@@ -77,6 +75,8 @@ class _Sem1State extends State<Sem1> {
       },
     );
   }
+
+  String s1, s2, s3, s4, s5, s6;
 
   List choice = [
     "Mathematics 1 (UCS113C)",
@@ -118,10 +118,10 @@ class _Sem1State extends State<Sem1> {
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.arrow_drop_down),
                         iconSize: 36,
-                        value: s2,
+                        value: s1,
                         onChanged: (newValue) {
                           setState(() {
-                            s2 = newValue;
+                            s1 = newValue;
                           });
                         },
                         items: choice.map(
@@ -161,10 +161,10 @@ class _Sem1State extends State<Sem1> {
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.arrow_drop_down),
                         iconSize: 36,
-                        value: s1,
+                        value: s2,
                         onChanged: (newValue) {
                           setState(() {
-                            s1 = newValue;
+                            s2 = newValue;
                           });
                         },
                         items: choice.map(
