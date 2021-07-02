@@ -46,12 +46,12 @@ class _Sem5State extends State<Sem5> {
   add() {
     adder.collection("test").doc(docid.text.toUpperCase()).update({
       "Semester 5": {
-        "\n" + e1.text: f1.text + " (" + grader(f1.text) + ")",
-        "\n" + e2.text: f2.text + " (" + grader(f2.text) + ")",
-        "\n" + e3.text: f3.text + " (" + grader(f3.text) + ")",
-        "\n" + e4.text: f4.text + " (" + grader(f4.text) + ")",
-        "\n" + e5.text: f5.text + " (" + grader(f5.text) + ")",
-        "\n" + e6.text: f6.text + " (" + grader(f6.text) + ")",
+        "\n" + s1: f1.text + " (" + grader(f1.text) + ")",
+        "\n" + s2: f2.text + " (" + grader(f2.text) + ")",
+        "\n" + s3: f3.text + " (" + grader(f3.text) + ")",
+        "\n" + s4: f4.text + " (" + grader(f4.text) + ")",
+        "\n" + s5: f5.text + " (" + grader(f5.text) + ")",
+        "\n" + s6: f6.text + " (" + grader(f6.text) + ")",
         "\nPercentage":
             percent(f1.text, f2.text, f3.text, f4.text, f5.text, f6.text),
       },
