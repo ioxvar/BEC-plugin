@@ -49,6 +49,7 @@ class Sem1 extends StatefulWidget {
   @override
   _Sem1State createState() => _Sem1State();
 }
+
 String s1, s2, s3, s4, s5, s6;
 
 class _Sem1State extends State<Sem1> {
@@ -77,7 +78,6 @@ class _Sem1State extends State<Sem1> {
     );
   }
 
-  
   List choice = [
     "Mathematics 1 (UCS113C)",
     "Electrical (UEE164C)",
@@ -109,7 +109,12 @@ class _Sem1State extends State<Sem1> {
                     Expanded(
                       child: DropdownButtonFormField(
                         //controller: m1,
-                        hint: Text("Select subject 1"),
+                        hint: Text(
+                          "Select subject 1",
+                          style: TextStyle(
+                            color: Colors.teal[700],
+                          ),
+                        ),
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.arrow_drop_down),
                         iconSize: 36,
@@ -134,6 +139,9 @@ class _Sem1State extends State<Sem1> {
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 1',
                           labelText: 'Marks 1',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
@@ -144,7 +152,12 @@ class _Sem1State extends State<Sem1> {
                   children: [
                     Expanded(
                       child: DropdownButtonFormField(
-                        hint: Text("Select subject 2"),
+                        hint: Text(
+                          "Select subject 2",
+                          style: TextStyle(
+                            color: Colors.teal[700],
+                          ),
+                        ),
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.arrow_drop_down),
                         iconSize: 36,
@@ -168,6 +181,9 @@ class _Sem1State extends State<Sem1> {
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 2',
                           labelText: 'Marks 2',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
@@ -178,7 +194,10 @@ class _Sem1State extends State<Sem1> {
                   children: [
                     Expanded(
                       child: DropdownButtonFormField(
-                        hint: Text("Select subject 3"),
+                        hint: Text("Select subject 3",
+                            style: TextStyle(
+                              color: Colors.teal[700],
+                            )),
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.arrow_drop_down),
                         iconSize: 36,
@@ -203,6 +222,9 @@ class _Sem1State extends State<Sem1> {
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 3',
                           labelText: 'Marks 3',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
@@ -214,7 +236,10 @@ class _Sem1State extends State<Sem1> {
                     Expanded(
                       child: DropdownButtonFormField(
                         //controller: m1,
-                        hint: Text("Select subject 4"),
+                        hint: Text("Select subject 4",
+                            style: TextStyle(
+                              color: Colors.teal[700],
+                            )),
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.arrow_drop_down),
                         iconSize: 36,
@@ -239,6 +264,9 @@ class _Sem1State extends State<Sem1> {
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 4',
                           labelText: 'Marks 4',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
@@ -250,7 +278,10 @@ class _Sem1State extends State<Sem1> {
                     Expanded(
                       child: DropdownButtonFormField(
                         //controller: m1,
-                        hint: Text("Select subject 5"),
+                        hint: Text("Select subject 5",
+                            style: TextStyle(
+                              color: Colors.teal[700],
+                            )),
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.arrow_drop_down),
                         iconSize: 36,
@@ -274,6 +305,9 @@ class _Sem1State extends State<Sem1> {
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 5',
                           labelText: 'Marks 5',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
@@ -285,7 +319,10 @@ class _Sem1State extends State<Sem1> {
                     Expanded(
                       child: DropdownButtonFormField(
                         //controller: m1,
-                        hint: Text("Select subject 6"),
+                        hint: Text("Select subject 6",
+                            style: TextStyle(
+                              color: Colors.teal[700],
+                            )),
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.arrow_drop_down),
                         iconSize: 36,
@@ -309,6 +346,9 @@ class _Sem1State extends State<Sem1> {
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 6',
                           labelText: 'Marks 6',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
