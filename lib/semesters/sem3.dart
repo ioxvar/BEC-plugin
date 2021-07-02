@@ -4,12 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import './sem1.dart';
 
 final adder = FirebaseFirestore.instance;
-final TextEditingController a1 = TextEditingController();
-final TextEditingController a2 = TextEditingController();
-final TextEditingController a3 = TextEditingController();
-final TextEditingController a4 = TextEditingController();
-final TextEditingController a5 = TextEditingController();
-final TextEditingController a6 = TextEditingController();
 final TextEditingController b1 = TextEditingController();
 final TextEditingController b2 = TextEditingController();
 final TextEditingController b3 = TextEditingController();
@@ -17,20 +11,23 @@ final TextEditingController b4 = TextEditingController();
 final TextEditingController b5 = TextEditingController();
 final TextEditingController b6 = TextEditingController();
 
-class Sem3 extends StatelessWidget {
-  
+class Sem3 extends StatefulWidget {
+  @override
+  _Sem3State createState() => _Sem3State();
+}
+
+class _Sem3State extends State<Sem3> {
   add() {
     adder.collection("test").doc(docid.text.toUpperCase()).update({
       "Semester 3": {
-        "\n"+a1.text.toLowerCase(): b1.text + " (" + grader(b1.text) + ")",
-        "\n"+a2.text.toLowerCase(): b2.text + " (" + grader(b2.text) + ")",
-        "\n"+a3.text.toLowerCase(): b3.text + " (" + grader(b3.text) + ")",
-        "\n"+a4.text.toLowerCase(): b4.text + " (" + grader(b4.text) + ")",
-        "\n"+a5.text.toLowerCase(): b5.text + " (" + grader(b5.text) + ")",
-        "\n"+a6.text.toLowerCase(): b6.text + " (" + grader(b6.text) + ")",
-      "\nPercentage":
-              percent(b1.text, b2.text, b3.text, b4.text, b5.text, b6.text),
-        
+        "\n" + s1: b1.text + " (" + grader(b1.text) + ")",
+        "\n" + s2: b2.text + " (" + grader(b2.text) + ")",
+        "\n" + s3: b3.text + " (" + grader(b3.text) + ")",
+        "\n" + s4: b4.text + " (" + grader(b4.text) + ")",
+        "\n" + s5: b5.text + " (" + grader(b5.text) + ")",
+        "\n" + s6: b6.text + " (" + grader(b6.text) + ")",
+        "\nPercentage":
+            percent(b1.text, b2.text, b3.text, b4.text, b5.text, b6.text),
       },
     }).then(
       (_) {
@@ -38,6 +35,17 @@ class Sem3 extends StatelessWidget {
       },
     );
   }
+
+  String s1, s2, s3, s4, s5, s6;
+
+  List choice = [
+    "Mathematics 3 (UMA336C)",
+    "Digital Systems (UCS351C)",
+    "Computer Organization (UCS352C)",
+    "OOP with Java (UCS353C)",
+    "Communication & Ethics (UCS354H)",
+    "Softskills (UHS002N)",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -51,45 +59,77 @@ class Sem3 extends StatelessWidget {
         child: ConstrainedBox(
           constraints: BoxConstraints(),
           child: Container(
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Column(
               children: <Widget>[
-                Row(
-                  // mainAxisAlignment: mainAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                Wrap(
+                  alignment: WrapAlignment.spaceEvenly,
                   children: [
                     Expanded(
-                      child: TextField(
-                        controller: a1,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter subject 1',
-                          labelText: 'Subject 1',
+                      child: DropdownButtonFormField(
+                        hint: Text(
+                          "Select subject 1",
+                          style: TextStyle(
+                            color: Colors.teal[700],
+                          ),
                         ),
+                        dropdownColor: Colors.white,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 36,
+                        value: s1,
+                        onChanged: (newValue) {
+                          setState(() {
+                            s1 = newValue;
+                          });
+                        },
+                        items: choice.map(
+                          (valueItem) {
+                            return DropdownMenuItem(
+                                value: valueItem, child: Text(valueItem));
+                          },
+                        ).toList(),
                       ),
                     ),
-                    //Spacer(flex: 2),
                     Expanded(
                       child: TextField(
                         controller: b1,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 1',
-                          labelText: 'Marks',
+                          labelText: 'Marks 1',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
-                Row(
-                  // mainAxisAlignment: mainAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                Wrap(
+                  alignment: WrapAlignment.spaceEvenly,
                   children: [
                     Expanded(
-                      child: TextField(
-                        controller: a2,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter subject 2',
-                          labelText: 'Subject 2',
+                      child: DropdownButtonFormField(
+                        hint: Text(
+                          "Select subject 2",
+                          style: TextStyle(
+                            color: Colors.teal[700],
+                          ),
                         ),
+                        dropdownColor: Colors.white,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 36,
+                        value: s2,
+                        onChanged: (newValue) {
+                          setState(() {
+                            s2 = newValue;
+                          });
+                        },
+                        items: choice.map(
+                          (valueItem) {
+                            return DropdownMenuItem(
+                                value: valueItem, child: Text(valueItem));
+                          },
+                        ).toList(),
                       ),
                     ),
                     //Spacer(flex: 2),
@@ -98,23 +138,41 @@ class Sem3 extends StatelessWidget {
                         controller: b2,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 2',
-                          labelText: 'Marks',
+                          labelText: 'Marks 2',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
-                Row(
-                  // mainAxisAlignment: mainAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                Wrap(
+                  alignment: WrapAlignment.spaceEvenly,
                   children: [
                     Expanded(
-                      child: TextField(
-                        controller: a3,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter subject 3',
-                          labelText: 'Subject 3',
+                      child: DropdownButtonFormField(
+                        hint: Text(
+                          "Select subject 3",
+                          style: TextStyle(
+                            color: Colors.teal[700],
+                          ),
                         ),
+                        dropdownColor: Colors.white,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 36,
+                        value: s3,
+                        onChanged: (newValue) {
+                          setState(() {
+                            s3 = newValue;
+                          });
+                        },
+                        items: choice.map(
+                          (valueItem) {
+                            return DropdownMenuItem(
+                                value: valueItem, child: Text(valueItem));
+                          },
+                        ).toList(),
                       ),
                     ),
                     //Spacer(flex: 2),
@@ -123,23 +181,41 @@ class Sem3 extends StatelessWidget {
                         controller: b3,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 3',
-                          labelText: 'Marks',
+                          labelText: 'Marks 3',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
-                Row(
-                  // mainAxisAlignment: mainAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                Wrap(
+                  alignment: WrapAlignment.spaceEvenly,
                   children: [
                     Expanded(
-                      child: TextField(
-                        controller: a4,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter subject 4',
-                          labelText: 'Subject 4',
+                      child: DropdownButtonFormField(
+                        hint: Text(
+                          "Select subject 4",
+                          style: TextStyle(
+                            color: Colors.teal[700],
+                          ),
                         ),
+                        dropdownColor: Colors.white,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 36,
+                        value: s4,
+                        onChanged: (newValue) {
+                          setState(() {
+                            s4 = newValue;
+                          });
+                        },
+                        items: choice.map(
+                          (valueItem) {
+                            return DropdownMenuItem(
+                                value: valueItem, child: Text(valueItem));
+                          },
+                        ).toList(),
                       ),
                     ),
                     //Spacer(flex: 2),
@@ -148,23 +224,41 @@ class Sem3 extends StatelessWidget {
                         controller: b4,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 4',
-                          labelText: 'Marks',
+                          labelText: 'Marks 4',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
-                Row(
-                  // mainAxisAlignment: mainAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                Wrap(
+                  alignment: WrapAlignment.spaceEvenly,
                   children: [
                     Expanded(
-                      child: TextField(
-                        controller: a5,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter subject 5',
-                          labelText: 'Subject 5',
+                      child: DropdownButtonFormField(
+                        hint: Text(
+                          "Select subject 5",
+                          style: TextStyle(
+                            color: Colors.teal[700],
+                          ),
                         ),
+                        dropdownColor: Colors.white,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 36,
+                        value: s5,
+                        onChanged: (newValue) {
+                          setState(() {
+                            s5 = newValue;
+                          });
+                        },
+                        items: choice.map(
+                          (valueItem) {
+                            return DropdownMenuItem(
+                                value: valueItem, child: Text(valueItem));
+                          },
+                        ).toList(),
                       ),
                     ),
                     //Spacer(flex: 2),
@@ -173,23 +267,41 @@ class Sem3 extends StatelessWidget {
                         controller: b5,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 5',
-                          labelText: 'Marks',
+                          labelText: 'Marks 5',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
-                Row(
-                  // mainAxisAlignment: mainAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                Wrap(
+                  alignment: WrapAlignment.spaceEvenly,
                   children: [
                     Expanded(
-                      child: TextField(
-                        controller: a6,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter subject 6',
-                          labelText: 'Subject 6',
+                      child: DropdownButtonFormField(
+                        hint: Text(
+                          "Select subject 6",
+                          style: TextStyle(
+                            color: Colors.teal[700],
+                          ),
                         ),
+                        dropdownColor: Colors.white,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 36,
+                        value: s6,
+                        onChanged: (newValue) {
+                          setState(() {
+                            s6 = newValue;
+                          });
+                        },
+                        items: choice.map(
+                          (valueItem) {
+                            return DropdownMenuItem(
+                                value: valueItem, child: Text(valueItem));
+                          },
+                        ).toList(),
                       ),
                     ),
                     //Spacer(flex: 2),
@@ -198,7 +310,10 @@ class Sem3 extends StatelessWidget {
                         controller: b6,
                         decoration: const InputDecoration(
                           hintText: 'Enter marks in subject 6',
-                          labelText: 'Marks',
+                          labelText: 'Marks 6',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),

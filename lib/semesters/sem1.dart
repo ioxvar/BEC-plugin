@@ -79,7 +79,7 @@ class _Sem1State extends State<Sem1> {
   String s1, s2, s3, s4, s5, s6;
 
   List choice = [
-    "Mathematics 1 (UCS113C)",
+    "Mathematics 1 (UMA113C)",
     "Electrical (UEE164C)",
     "Physics (UPH162C)",
     "Constitution of India (UHS126M)",
