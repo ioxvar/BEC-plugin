@@ -4,12 +4,6 @@ import './sem1.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final adder = FirebaseFirestore.instance;
-final TextEditingController e1 = TextEditingController();
-final TextEditingController e2 = TextEditingController();
-final TextEditingController e3 = TextEditingController();
-final TextEditingController e4 = TextEditingController();
-final TextEditingController e5 = TextEditingController();
-final TextEditingController e6 = TextEditingController();
 final TextEditingController f1 = TextEditingController();
 final TextEditingController f2 = TextEditingController();
 final TextEditingController f3 = TextEditingController();
