@@ -42,12 +42,12 @@ class Sem7 extends StatelessWidget {
   add() {
     adder.collection("test").doc(docid.text.toUpperCase()).update({
       "Semester 7": {
-        "\n" + i1.text.toLowerCase(): j1.text + " (" + grader(j1.text) + ")",
-        "\n" + i2.text.toLowerCase(): j2.text + " (" + grader(j2.text) + ")",
-        "\n" + i3.text.toLowerCase(): j3.text + " (" + grader(j3.text) + ")",
-        "\n" + i4.text.toLowerCase(): j4.text + " (" + grader(j4.text) + ")",
-        "\n" + i5.text.toLowerCase(): j5.text + " (" + grader(j5.text) + ")",
-        "\n" + i6.text.toLowerCase(): j6.text + " (" + grader(j6.text) + ")",
+        "\n" + i1.text: j1.text + " (" + grader(j1.text) + ")",
+        "\n" + i2.text: j2.text + " (" + grader(j2.text) + ")",
+        "\n" + i3.text: j3.text + " (" + grader(j3.text) + ")",
+        "\n" + i4.text: j4.text + " (" + grader(j4.text) + ")",
+        "\n" + i5.text: j5.text + " (" + grader(j5.text) + ")",
+        "\n" + i6.text: j6.text + " (" + grader(j6.text) + ")",
         "\nPercentage":
             percent(j1.text, j2.text, j3.text, j4.text, j5.text, j6.text),
       },

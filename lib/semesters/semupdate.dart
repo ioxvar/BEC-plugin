@@ -52,12 +52,12 @@ class _Sem1State extends State<SemUpdate> {
         "Name": newname.text,
         "Branch": newbranch.text,
         "Semester 1": {
-          "\n" + x1.text.toLowerCase(): y1.text + " (" + grader(y1.text) + ")",
-          "\n" + x2.text.toLowerCase(): y2.text + " (" + grader(y2.text) + ")",
-          "\n" + x3.text.toLowerCase(): y3.text + " (" + grader(y3.text) + ")",
-          "\n" + x4.text.toLowerCase(): y4.text + " (" + grader(y4.text) + ")",
-          "\n" + x5.text.toLowerCase(): y5.text + " (" + grader(y5.text) + ")",
-          "\n" + x6.text.toLowerCase(): y6.text + " (" + grader(y6.text) + ")",
+          "\n" + x1.text: y1.text + " (" + grader(y1.text) + ")",
+          "\n" + x2.text: y2.text + " (" + grader(y2.text) + ")",
+          "\n" + x3.text: y3.text + " (" + grader(y3.text) + ")",
+          "\n" + x4.text: y4.text + " (" + grader(y4.text) + ")",
+          "\n" + x5.text: y5.text + " (" + grader(y5.text) + ")",
+          "\n" + x6.text: y6.text + " (" + grader(y6.text) + ")",
           "\nPercentage":
               percent(y1.text, y2.text, y3.text, y4.text, y5.text, y6.text),
         },
