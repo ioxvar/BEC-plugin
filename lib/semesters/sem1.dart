@@ -108,6 +108,9 @@ class _Sem1State extends State<Sem1> {
                   children: [
                     Expanded(
                       child: DropdownButtonFormField(
+                        // decoration: const InputDecoration(
+                        //   border: const OutlineInputBorder(),
+                        // ),
                         //controller: m1,
                         hint: Text(
                           "Select subject 1",
