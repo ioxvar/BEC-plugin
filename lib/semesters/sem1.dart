@@ -22,7 +22,7 @@ percent(q, w, e, r, t, y) {
       n = int.parse(y);
   sum = z + x + c + v + b + n;
   percentage = (sum / 600) * 100;
-  return percentage.toString();
+  return percentage.toStringAsFixed(2);
 }
 
 grader(sub) {
@@ -65,7 +65,7 @@ class _Sem1State extends State<Sem1> {
           "\n" + s5: m5.text + " (" + grader(m5.text) + ")",
           "\n" + s6: m6.text + " (" + grader(m6.text) + ")",
           "\nPercentage":
-              percent(m1.text, m2.text, m3.text, m4.text, m5.text, m6.text),
+              percent(m1.text, m2.text, m3.text, m4.text, m5.text, m6.text) + "\n",
         },
       },
       SetOptions(merge: true),

@@ -53,7 +53,7 @@ class _Sem1State extends State<SemUpdate> {
           "\n" + s5: y5.text + " (" + grader(y5.text) + ")",
           "\n" + s6: y6.text + " (" + grader(y6.text) + ")",
           "\nPercentage":
-              percent(y1.text, y2.text, y3.text, y4.text, y5.text, y6.text),
+              percent(y1.text, y2.text, y3.text, y4.text, y5.text, y6.text) + "\n",
         },
       },
     ).then(

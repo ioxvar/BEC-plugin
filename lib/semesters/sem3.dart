@@ -27,7 +27,7 @@ class _Sem3State extends State<Sem3> {
         "\n" + s5: b5.text + " (" + grader(b5.text) + ")",
         "\n" + s6: b6.text + " (" + grader(b6.text) + ")",
         "\nPercentage":
-            percent(b1.text, b2.text, b3.text, b4.text, b5.text, b6.text),
+            percent(b1.text, b2.text, b3.text, b4.text, b5.text, b6.text) + "\n",
       },
     }).then(
       (_) {

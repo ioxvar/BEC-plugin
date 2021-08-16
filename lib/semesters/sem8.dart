@@ -49,7 +49,7 @@ class Sem8 extends StatelessWidget {
         "\n" + k5.text: l5.text + " (" + grader(l5.text) + ")",
         "\n" + k6.text: l6.text + " (" + grader(l6.text) + ")",
         "\nPercentage":
-            percent(l1.text, l2.text, l3.text, l4.text, l5.text, l6.text),
+            percent(l1.text, l2.text, l3.text, l4.text, l5.text, l6.text) + "\n",
       },
     }).then(
       (_) {
