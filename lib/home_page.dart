@@ -72,6 +72,9 @@ class _SideBarState extends State<SideBar> {
           title: const Text('ADD'),
           onTap: () => Navigator.of(context).push(NewPage(1)),
         ),
+        // Divider(
+        //   color: Colors.grey[200],
+        // ),
         ListTile(
           leading: Icon(Icons.arrow_downward),
           title: const Text('FETCH'),

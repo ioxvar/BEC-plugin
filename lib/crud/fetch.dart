@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'add.dart';
-// ignore: unused_import
 import 'package:becplugin/semesters/chosen.dart';
 
 class FetchData extends StatefulWidget {
