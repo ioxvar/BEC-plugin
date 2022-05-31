@@ -27,6 +27,5 @@ Using Flutter for development also allowed me to build a cross-platform app that
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [Flutter](https://flutter.dev) - Framework
-- [Dart](https://dart.dev) -  UI
 - [Firebase](https://firebase.google.com) - Server Environment
 
